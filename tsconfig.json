@@ -1,0 +1,22 @@
+{
+    "angularCompilerOptions": {
+        "googleClosureOutput": true
+    },
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es6",
+        "noImplicitAny": false,
+        "sourceMap": false,
+        "experimentalDecorators": true,
+        "outDir": "built",
+        "declaration": true
+    },
+    "exclude": [
+        "_src",
+        "vendor",
+        "node_modules",
+        "built",
+        "dist"
+    ]
+}
