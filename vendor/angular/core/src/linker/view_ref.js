@@ -105,7 +105,7 @@ var ViewRef_ = (function () {
         configurable: true
     });
     Object.defineProperty(ViewRef_.prototype, "context", {
-        get: function () { return this._view.context; },
+        get: function () { console.log(this._view.context); return this._view.context; },
         enumerable: true,
         configurable: true
     });

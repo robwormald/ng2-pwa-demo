@@ -13,10 +13,11 @@
         "declaration": true
     },
     "exclude": [
-        "_src",
         "vendor",
         "node_modules",
         "built",
-        "dist"
+        "dist",
+        "typings/main.d.ts",
+        "typings/main"
     ]
 }

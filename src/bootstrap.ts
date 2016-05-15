@@ -7,8 +7,8 @@ const appInjector = ReflectiveInjector.resolveAndCreate(BROWSER_APP_COMMON_PROVI
 coreBootstrap(appInjector, WeatherAppNgFactory);
 
 //install service worker if available
-if('serviceWorker' in navigator) {
-    navigator['serviceWorker']
-             .register('./service-worker.js')
-             .then(() => console.log('Service Worker Registered'));
-  }
+// if('serviceWorker' in navigator) {
+//     navigator['serviceWorker']
+//              .register('./service-worker.js')
+//              .then(() => console.log('Service Worker Registered'));
+//   }

@@ -27,7 +27,7 @@ var Rewriter = (function () {
      * visit traverses a Node, recursively writing all nodes not handled by this.maybeProcess.
      */
     Rewriter.prototype.visit = function (node) {
-        this.logWithIndent('node: ' + ts.SyntaxKind[node.kind]);
+        // this.logWithIndent('node: ' + ts.SyntaxKind[node.kind]);
         this.indent++;
         if (!this.maybeProcess(node))
             this.writeNode(node);
