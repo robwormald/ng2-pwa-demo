@@ -23,7 +23,7 @@ const nodeDebugInfos_CityPicker0:import1.StaticNodeDebugInfo[] = [
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{'picker': null}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
@@ -115,7 +115,7 @@ class _View_CityPicker0 extends import3.DebugAppView<import4.CityPicker> {
     this._text_6 = this.renderer.createText(this._el_5,'\n    ',this.debug(6,2,27));
     this._el_7 = this.renderer.createElement(this._el_5,'select',this.debug(7,3,4));
     this.renderer.setElementAttribute(this._el_7,'id','selectCityToAdd');
-    this._text_8 = this.renderer.createText(this._el_7,'\n          ',this.debug(8,3,33));
+    this._text_8 = this.renderer.createText(this._el_7,'\n          ',this.debug(8,3,41));
     this._el_9 = this.renderer.createElement(this._el_7,'option',this.debug(9,4,10));
     this.renderer.setElementAttribute(this._el_9,'value','austin');
     this._text_10 = this.renderer.createText(this._el_9,'Austin, TX',this.debug(10,4,33));
@@ -139,8 +139,8 @@ class _View_CityPicker0 extends import3.DebugAppView<import4.CityPicker> {
     this._el_24 = this.renderer.createElement(this._el_7,'option',this.debug(24,9,10));
     this.renderer.setElementAttribute(this._el_24,'value','seattle');
     this._text_25 = this.renderer.createText(this._el_24,'Seattle, WA',this.debug(25,9,34));
-    this._text_26 = this.renderer.createText(this._el_7,'\n        ',this.debug(26,9,54));
-    this._text_27 = this.renderer.createText(this._el_5,'\n  ',this.debug(27,10,17));
+    this._text_26 = this.renderer.createText(this._el_7,'\n    ',this.debug(26,9,54));
+    this._text_27 = this.renderer.createText(this._el_5,'\n  ',this.debug(27,10,13));
     this._text_28 = this.renderer.createText(this._el_0,'\n  ',this.debug(28,11,8));
     this._el_29 = this.renderer.createElement(this._el_0,'div',this.debug(29,12,2));
     this.renderer.setElementAttribute(this._el_29,'class','dialog-buttons');
@@ -148,15 +148,17 @@ class _View_CityPicker0 extends import3.DebugAppView<import4.CityPicker> {
     this._el_31 = this.renderer.createElement(this._el_29,'button',this.debug(31,13,4));
     this.renderer.setElementAttribute(this._el_31,'class','button');
     this.renderer.setElementAttribute(this._el_31,'id','butAddCity');
-    this._text_32 = this.renderer.createText(this._el_31,'Add',this.debug(32,13,43));
-    this._text_33 = this.renderer.createText(this._el_29,'\n    ',this.debug(33,13,55));
+    this._text_32 = this.renderer.createText(this._el_31,'Add',this.debug(32,13,77));
+    this._text_33 = this.renderer.createText(this._el_29,'\n    ',this.debug(33,13,89));
     this._el_34 = this.renderer.createElement(this._el_29,'button',this.debug(34,14,4));
     this.renderer.setElementAttribute(this._el_34,'class','button');
     this.renderer.setElementAttribute(this._el_34,'id','butAddCancel');
-    this._text_35 = this.renderer.createText(this._el_34,'Cancel',this.debug(35,14,45));
-    this._text_36 = this.renderer.createText(this._el_29,'\n  ',this.debug(36,14,60));
+    this._text_35 = this.renderer.createText(this._el_34,'Cancel',this.debug(35,14,75));
+    this._text_36 = this.renderer.createText(this._el_29,'\n  ',this.debug(36,14,90));
     this._text_37 = this.renderer.createText(this._el_0,'\n',this.debug(37,15,8));
     this._text_38 = this.renderer.createText(parentRenderNode,'\n',this.debug(38,16,6));
+    var disposable_0:Function = this.renderer.listen(this._el_31,'click',this.eventHandler(this._handle_click_31_0.bind(this)));
+    var disposable_1:Function = this.renderer.listen(this._el_34,'click',this.eventHandler(this._handle_click_34_0.bind(this)));
     this.init([],[
       this._el_0,
       this._text_1,
@@ -198,8 +200,24 @@ class _View_CityPicker0 extends import3.DebugAppView<import4.CityPicker> {
       this._text_37,
       this._text_38
     ]
-    ,[],[]);
+    ,[
+      disposable_0,
+      disposable_1
+    ]
+    ,[]);
     return null;
+  }
+  private _handle_click_31_0($event):boolean {
+    this.markPathToRootAsCheckOnce();
+    this.debug(31,13,43);
+    const pd_0:any = ((<any>this.context.save.emit(this._el_7.value)) !== false);
+    return (true && pd_0);
+  }
+  private _handle_click_34_0($event):boolean {
+    this.markPathToRootAsCheckOnce();
+    this.debug(34,14,45);
+    const pd_0:any = ((<any>this.context.cancel.emit($event)) !== false);
+    return (true && pd_0);
   }
 }
 export function viewFactory_CityPicker0(viewUtils:import5.ViewUtils,parentInjector:import6.Injector,declarationEl:import7.AppElement):import3.AppView<import4.CityPicker> {

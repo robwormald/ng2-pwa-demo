@@ -1,7 +1,7 @@
 <header class="header">
   <h1 class="header__title">Weather PWA</h1>
   <button (click)="refresh()" id="butRefresh" class="headerButton" aria-label="Refresh"></button>
-  <button (click)="add()" id="butAdd" class="headerButton" aria-label="Add"></button>
+  <button (click)="showPicker()" id="butAdd" class="headerButton" aria-label="Add"></button>
 </header>
 
 <main class="main">
@@ -10,4 +10,7 @@
    <li *ngFor="let city of cities">{{city}}</li>
  </ul>
 </main>
-<city-picker class="dialog-container"></city-picker>
+<div class="dialog-container" [ngClass]="viewState">
+  <city-picker (save)="addCity($event)" (cancel)="onCancel($event)"></city-picker>
+</div>
+
