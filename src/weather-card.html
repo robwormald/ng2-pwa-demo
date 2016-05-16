@@ -1,11 +1,11 @@
 <div class="card cardTemplate weather-forecast">
     <div class="city-key" hidden></div>
-    <div class="location"></div>
+    <div class="location">{{name}}</div>
     <div class="date"></div>
     <div class="description"></div>
     <div class="current">
       <div class="visual">
-        <div class="icon"></div>
+        <div class="icon" [ngClass]="icon"></div>
         <div class="temperature">
           <span class="value"></span><span class="scale">°F</span>
         </div>

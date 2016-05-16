@@ -1,24 +1,24 @@
-import {Component, Renderer, ViewChild, QueryList, ElementRef, AfterViewInit, NgZone, ApplicationRef} from '@angular/core'
-import {NgFor, NgIf, NgClass} from '@angular/common'
+import {Component, Renderer, ViewChild, QueryList, ElementRef, AfterViewInit, NgZone, ApplicationRef, provide} from '@angular/core'
+import {NgFor, NgIf, NgClass, AsyncPipe} from '@angular/common'
 import {WeatherCard} from './weather-card'
 import {CityPicker} from './city-picker'
-import {WeatherAPI} from './weather-api'
-import {WeatherData} from './weather-data'
 
+import {WeatherData} from './weather-data'
 
 @Component({
 	selector: 'weather-app',
 	templateUrl: 'app.html',
 	styleUrls: ['app.css'],
   directives: [NgFor, NgIf, NgClass, WeatherCard, CityPicker],
-  providers: [WeatherAPI, WeatherData]
+  pipes: [],
+  providers: []
 })
 export class WeatherApp {
   viewState = {}
   cities = [];
-  constructor(public weatherAPI:WeatherAPI, public renderer:Renderer, public app:ApplicationRef){
-
-
+  constructor(public weatherData:WeatherData){
+    weatherData.cities
+      .subscribe(cities => this.cities = cities);
   }
 
   showPicker(){
@@ -26,6 +26,7 @@ export class WeatherApp {
   }
   addCity(city){
     this.setDialogState(false);
+    this.weatherData.addCity(city);
   }
   onCancel(event){
     this.setDialogState(false);
