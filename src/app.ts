@@ -1,9 +1,10 @@
-import {Component, Renderer, ViewChild, QueryList, ElementRef, AfterViewInit, NgZone} from '@angular/core'
+import {Component, Renderer, ViewChild, QueryList, ElementRef, AfterViewInit, NgZone, ApplicationRef} from '@angular/core'
 import {NgFor} from '@angular/common'
 import {WeatherCard} from './weather-card'
 import {CityPicker} from './city-picker'
-import {WeatherAPI} from './services/weather-api'
-import {WeatherData} from './services/weather-data'
+import {WeatherAPI} from './weather-api'
+import {WeatherData} from './weather-data'
+
 
 @Component({
 	selector: 'weather-app',
@@ -14,17 +15,15 @@ import {WeatherData} from './services/weather-data'
 })
 export class WeatherApp implements AfterViewInit{
   cities = [];
-  constructor(public weatherAPI:WeatherAPI, public renderer:Renderer, public _zone:NgZone){
-    window['Comp'] = this;
+  constructor(public weatherAPI:WeatherAPI, public renderer:Renderer, public app:ApplicationRef){
+
+
   }
   ngAfterViewInit(){
 
   }
   add(){
-   this._zone.run(() => {
-      this.cities = [{id: 1}]
-   })
-    //this.renderer.setElementClass(this.cityPicker.nativeElement, 'dialog-container--visible', true)
+    this.cities.push({name: 'test'})
   }
   refresh(){
     console.log('refreshing...')

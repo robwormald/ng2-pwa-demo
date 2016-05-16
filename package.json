@@ -3,14 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "postinstall": "cp vendor/closure/compiler.jar node_modules/google-closure-compiler && cp vendor/tsickle/* node_modules/tsickle/build/src",
-    "build": "npm run clean && ngc && ./build_closure.sh && npm run copy",
-    "clean": "rm -rf dist && rm -rf built",
-    "copy": "cp index.html dist/index.html && cp vendor/angular2-polyfills.min.js dist/angular2-polyfills.min.js && cp vendor/manifest.json dist/manifest.json && cp -r images dist/images"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@angular/common": "file:vendor/angular/common",
     "@angular/compiler": "file:vendor/angular/compiler",
@@ -18,13 +10,20 @@
     "@angular/core": "file:vendor/angular/core",
     "@angular/platform-browser": "file:vendor/angular/platform-browser",
     "@angular/platform-server": "file:vendor/angular/platform-server",
-    "rxjs-es": "file:vendor/RxJS",
-    "rxjs": "^5.0.0-beta.6"
-  },
-  "devDependencies": {
     "google-closure-compiler": "^20160315.2.0",
-    "systemjs-builder": "^0.15.16",
-    "tsickle": "^0.1.2",
-    "typescript": "^1.9.0-dev.20160513"
-  }
+    "rxjs": "^5.0.0-beta.6",
+    "rxjs-es": "file:vendor/RxJS",
+    "typescript": "^1.9.0-dev.20160502",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "cp vendor/closure/compiler.jar node_modules/google-closure-compiler && cp vendor/tsickle/* node_modules/tsickle/build/src",
+   "build": "npm run clean && ngc && ./build_closure.sh && npm run copy",
+    "clean": "rm -rf dist && rm -rf built",
+    "copy": "cp index.html dist/index.html && cp vendor/angular2-polyfills.min.js dist/angular2-polyfills.min.js && cp -r images dist/images"
+
+  },
+  "author": "Alex Eagle <alexeagle@google.com> (https://angularjs.org/)",
+  "license": "MIT"
 }

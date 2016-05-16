@@ -6,6 +6,8 @@
 
 <main class="main">
 
-  <weather-card *ngFor="let city of cities"></weather-card>
+ <ul>
+   <li *ngFor="let city of cities">{{city}}</li>
+ </ul>
 </main>
 <city-picker class="dialog-container"></city-picker>

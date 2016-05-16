@@ -18,14 +18,14 @@ import * as import12 from '@angular/core/src/change_detection/change_detection';
 import * as import13 from '@angular/core/src/change_detection/differs/iterable_differs';
 import * as import14 from './city-picker.ngfactory';
 import * as import15 from '@angular/core/src/metadata/view';
-import * as import16 from './weather-card';
-import * as import17 from './weather-card.ngfactory';
-import * as import18 from './services/weather-api';
-import * as import19 from './services/weather-data';
-import * as import20 from '@angular/core/src/zone/ng_zone';
-import * as import21 from '@angular/core/src/linker/component_factory';
+import * as import16 from './weather-api';
+import * as import17 from './weather-data';
+import * as import18 from '@angular/core/src/application_ref';
+import * as import19 from '@angular/core/src/linker/component_factory';
 const styles_WeatherApp:any[] = [import0.styles];
 const nodeDebugInfos_WeatherApp0:import1.StaticNodeDebugInfo[] = [
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
@@ -43,6 +43,7 @@ const nodeDebugInfos_WeatherApp0:import1.StaticNodeDebugInfo[] = [
     import3.NgFor
   ]
   ,null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([import4.CityPicker],import4.CityPicker,{}),
@@ -63,16 +64,19 @@ class _View_WeatherApp0 extends import6.DebugAppView<import7.WeatherApp> {
   _text_9: any;
   _el_10: any;
   _text_11: any;
-  _anchor_12: any;
-  private _appEl_12:import8.AppElement;
-  _TemplateRef_12_5:any;
-  _NgFor_12_6:import3.NgFor;
+  _el_12: any;
   _text_13: any;
-  _text_14: any;
-  _el_15: any;
-  private _appEl_15:import8.AppElement;
-  _CityPicker_15_4:import4.CityPicker;
+  _anchor_14: any;
+  private _appEl_14:import8.AppElement;
+  _TemplateRef_14_5:any;
+  _NgFor_14_6:import3.NgFor;
+  _text_15: any;
   _text_16: any;
+  _text_17: any;
+  _el_18: any;
+  private _appEl_18:import8.AppElement;
+  _CityPicker_18_4:import4.CityPicker;
+  _text_19: any;
   private _expr_2: any;
   constructor(viewUtils:import9.ViewUtils,parentInjector:import10.Injector,declarationEl:import8.AppElement) {
     super(_View_WeatherApp0,renderType_WeatherApp,import11.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import12.ChangeDetectionStrategy.CheckAlways,nodeDebugInfos_WeatherApp0);
@@ -99,21 +103,24 @@ class _View_WeatherApp0 extends import6.DebugAppView<import7.WeatherApp> {
     this._text_9 = this.renderer.createText(parentRenderNode,'\n\n',this.debug(9,4,9));
     this._el_10 = this.renderer.createElement(parentRenderNode,'main',this.debug(10,6,0));
     this.renderer.setElementAttribute(this._el_10,'class','main');
-    this._text_11 = this.renderer.createText(this._el_10,'\n\n  ',this.debug(11,6,19));
-    this._anchor_12 = this.renderer.createTemplateAnchor(this._el_10,this.debug(12,8,2));
-    this._appEl_12 = new import8.AppElement(12,10,this,this._anchor_12);
-    this._TemplateRef_12_5 = new import2.TemplateRef_(this._appEl_12,viewFactory_WeatherApp1);
-    this._NgFor_12_6 = new import3.NgFor(this._appEl_12.vcRef,this._TemplateRef_12_5,this.parentInjector.get(import13.IterableDiffers),this.ref);
-    this._text_13 = this.renderer.createText(this._el_10,'\n',this.debug(13,8,59));
-    this._text_14 = this.renderer.createText(parentRenderNode,'\n',this.debug(14,9,7));
-    this._el_15 = this.renderer.createElement(parentRenderNode,'city-picker',this.debug(15,10,0));
-    this.renderer.setElementAttribute(this._el_15,'class','dialog-container');
-    this._appEl_15 = new import8.AppElement(15,null,this,this._el_15);
-    var compView_15 = import14.viewFactory_CityPicker0(this.viewUtils,this.injector(15),this._appEl_15);
-    this._CityPicker_15_4 = new import4.CityPicker();
-    this._appEl_15.initComponent(this._CityPicker_15_4,[],compView_15);
-    compView_15.create(this._CityPicker_15_4,[],null);
-    this._text_16 = this.renderer.createText(parentRenderNode,'\n',this.debug(16,10,52));
+    this._text_11 = this.renderer.createText(this._el_10,'\n\n ',this.debug(11,6,19));
+    this._el_12 = this.renderer.createElement(this._el_10,'ul',this.debug(12,8,1));
+    this._text_13 = this.renderer.createText(this._el_12,'\n   ',this.debug(13,8,5));
+    this._anchor_14 = this.renderer.createTemplateAnchor(this._el_12,this.debug(14,9,3));
+    this._appEl_14 = new import8.AppElement(14,12,this,this._anchor_14);
+    this._TemplateRef_14_5 = new import2.TemplateRef_(this._appEl_14,viewFactory_WeatherApp1);
+    this._NgFor_14_6 = new import3.NgFor(this._appEl_14.vcRef,this._TemplateRef_14_5,this.parentInjector.get(import13.IterableDiffers),this.ref);
+    this._text_15 = this.renderer.createText(this._el_12,'\n ',this.debug(15,9,48));
+    this._text_16 = this.renderer.createText(this._el_10,'\n',this.debug(16,10,6));
+    this._text_17 = this.renderer.createText(parentRenderNode,'\n',this.debug(17,11,7));
+    this._el_18 = this.renderer.createElement(parentRenderNode,'city-picker',this.debug(18,12,0));
+    this.renderer.setElementAttribute(this._el_18,'class','dialog-container');
+    this._appEl_18 = new import8.AppElement(18,null,this,this._el_18);
+    var compView_18 = import14.viewFactory_CityPicker0(this.viewUtils,this.injector(18),this._appEl_18);
+    this._CityPicker_18_4 = new import4.CityPicker();
+    this._appEl_18.initComponent(this._CityPicker_18_4,[],compView_18);
+    compView_18.create(this._CityPicker_18_4,[],null);
+    this._text_19 = this.renderer.createText(parentRenderNode,'\n',this.debug(19,12,52));
     var disposable_0:Function = this.renderer.listen(this._el_5,'click',this.eventHandler(this._handle_click_5_0.bind(this)));
     var disposable_1:Function = this.renderer.listen(this._el_7,'click',this.eventHandler(this._handle_click_7_0.bind(this)));
     this._expr_2 = import12.uninitialized;
@@ -130,11 +137,14 @@ class _View_WeatherApp0 extends import6.DebugAppView<import7.WeatherApp> {
       this._text_9,
       this._el_10,
       this._text_11,
-      this._anchor_12,
+      this._el_12,
       this._text_13,
-      this._text_14,
-      this._el_15,
-      this._text_16
+      this._anchor_14,
+      this._text_15,
+      this._text_16,
+      this._text_17,
+      this._el_18,
+      this._text_19
     ]
     ,[
       disposable_0,
@@ -144,20 +154,20 @@ class _View_WeatherApp0 extends import6.DebugAppView<import7.WeatherApp> {
     return null;
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import2.TemplateRef) && (12 === requestNodeIndex))) { return this._TemplateRef_12_5; }
-    if (((token === import3.NgFor) && (12 === requestNodeIndex))) { return this._NgFor_12_6; }
-    if (((token === import4.CityPicker) && (15 === requestNodeIndex))) { return this._CityPicker_15_4; }
+    if (((token === import2.TemplateRef) && (14 === requestNodeIndex))) { return this._TemplateRef_14_5; }
+    if (((token === import3.NgFor) && (14 === requestNodeIndex))) { return this._NgFor_14_6; }
+    if (((token === import4.CityPicker) && (18 === requestNodeIndex))) { return this._CityPicker_18_4; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
-    this.debug(12,8,16);
+    this.debug(14,9,7);
     const currVal_2 = this.context.cities;
     if (import9.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
-      this._NgFor_12_6.ngForOf = currVal_2;
-      this.renderer.setBindingDebugInfo(this._anchor_12,'ng-reflect-ng-for-of',((currVal_2 == null)? null: currVal_2.toString()));
+      this._NgFor_14_6.ngForOf = currVal_2;
+      this.renderer.setBindingDebugInfo(this._anchor_14,'ng-reflect-ng-for-of',((currVal_2 == null)? null: currVal_2.toString()));
       this._expr_2 = currVal_2;
     }
-    if (!throwOnChange) { this._NgFor_12_6.ngDoCheck(); }
+    if (!throwOnChange) { this._NgFor_14_6.ngDoCheck(); }
     this.detectContentChildrenChanges(throwOnChange);
     this.detectViewChildrenChanges(throwOnChange);
   }
@@ -178,27 +188,38 @@ export function viewFactory_WeatherApp0(viewUtils:import9.ViewUtils,parentInject
   if ((renderType_WeatherApp === null)) { (renderType_WeatherApp = viewUtils.createRenderComponentType('/Users/robwormald/Dev/demos/ng2-pwa-demo/src/app.html',0,import15.ViewEncapsulation.Emulated,styles_WeatherApp)); }
   return new _View_WeatherApp0(viewUtils,parentInjector,declarationEl);
 }
-const nodeDebugInfos_WeatherApp1:import1.StaticNodeDebugInfo[] = [new import1.StaticNodeDebugInfo([import16.WeatherCard],import16.WeatherCard,{})];
+const nodeDebugInfos_WeatherApp1:import1.StaticNodeDebugInfo[] = [
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{})
+]
+;
 class _View_WeatherApp1 extends import6.DebugAppView<any> {
   _el_0: any;
-  private _appEl_0:import8.AppElement;
-  _WeatherCard_0_4:import16.WeatherCard;
+  _text_1: any;
+  private _expr_0: any;
   constructor(viewUtils:import9.ViewUtils,parentInjector:import10.Injector,declarationEl:import8.AppElement) {
     super(_View_WeatherApp1,renderType_WeatherApp,import11.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import12.ChangeDetectionStrategy.CheckAlways,nodeDebugInfos_WeatherApp1);
   }
   createInternal(rootSelector:string):import8.AppElement {
-    this._el_0 = this.renderer.createElement(null,'weather-card',this.debug(0,8,2));
-    this._appEl_0 = new import8.AppElement(0,null,this,this._el_0);
-    var compView_0 = import17.viewFactory_WeatherCard0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._WeatherCard_0_4 = new import16.WeatherCard();
-    this._appEl_0.initComponent(this._WeatherCard_0_4,[],compView_0);
-    compView_0.create(this._WeatherCard_0_4,[],null);
-    this.init([].concat([this._el_0]),[this._el_0],[],[]);
+    this._el_0 = this.renderer.createElement(null,'li',this.debug(0,9,3));
+    this._text_1 = this.renderer.createText(this._el_0,'',this.debug(1,9,35));
+    this._expr_0 = import12.uninitialized;
+    this.init([].concat([this._el_0]),[
+      this._el_0,
+      this._text_1
+    ]
+    ,[],[]);
     return null;
   }
-  injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import16.WeatherCard) && (0 === requestNodeIndex))) { return this._WeatherCard_0_4; }
-    return notFoundResult;
+  detectChangesInternal(throwOnChange:boolean):void {
+    this.detectContentChildrenChanges(throwOnChange);
+    this.debug(1,9,35);
+    const currVal_0 = import9.interpolate(1,'',this.context.$implicit,'');
+    if (import9.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
+      this.renderer.setText(this._text_1,currVal_0);
+      this._expr_0 = currVal_0;
+    }
+    this.detectViewChildrenChanges(throwOnChange);
   }
 }
 function viewFactory_WeatherApp1(viewUtils:import9.ViewUtils,parentInjector:import10.Injector,declarationEl:import8.AppElement):import6.AppView<any> {
@@ -206,41 +227,41 @@ function viewFactory_WeatherApp1(viewUtils:import9.ViewUtils,parentInjector:impo
 }
 const styles_WeatherApp_Host:any[] = [];
   const nodeDebugInfos_WeatherApp_Host0:import1.StaticNodeDebugInfo[] = [new import1.StaticNodeDebugInfo([
-    import18.WeatherAPI,
+    import16.WeatherAPI,
     import7.WeatherApp,
-    import19.WeatherData
+    import17.WeatherData
   ]
 ,import7.WeatherApp,{})];
 var renderType_WeatherApp_Host:import5.RenderComponentType = null;
 class _View_WeatherApp_Host0 extends import6.DebugAppView<any> {
   _el_0: any;
   private _appEl_0:import8.AppElement;
-  _WeatherAPI_0_4:import18.WeatherAPI;
+  _WeatherAPI_0_4:import16.WeatherAPI;
   _WeatherApp_0_5:import7.WeatherApp;
-  __WeatherData_0_6:import19.WeatherData;
+  __WeatherData_0_6:import17.WeatherData;
   constructor(viewUtils:import9.ViewUtils,parentInjector:import10.Injector,declarationEl:import8.AppElement) {
     super(_View_WeatherApp_Host0,renderType_WeatherApp_Host,import11.ViewType.HOST,viewUtils,parentInjector,declarationEl,import12.ChangeDetectionStrategy.CheckAlways,nodeDebugInfos_WeatherApp_Host0);
   }
-  get _WeatherData_0_6():import19.WeatherData {
+  get _WeatherData_0_6():import17.WeatherData {
     this.debug(0,0,0);
-    if ((this.__WeatherData_0_6 == null)) { (this.__WeatherData_0_6 = new import19.WeatherData()); }
+    if ((this.__WeatherData_0_6 == null)) { (this.__WeatherData_0_6 = new import17.WeatherData()); }
     return this.__WeatherData_0_6;
   }
   createInternal(rootSelector:string):import8.AppElement {
     this._el_0 = this.selectOrCreateHostElement('weather-app',rootSelector,this.debug(0,0,0));
     this._appEl_0 = new import8.AppElement(0,null,this,this._el_0);
     var compView_0 = viewFactory_WeatherApp0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._WeatherAPI_0_4 = new import18.WeatherAPI();
-    this._WeatherApp_0_5 = new import7.WeatherApp(this._WeatherAPI_0_4,this.renderer,this.parentInjector.get(import20.NgZone));
+    this._WeatherAPI_0_4 = new import16.WeatherAPI();
+    this._WeatherApp_0_5 = new import7.WeatherApp(this._WeatherAPI_0_4,this.renderer,this.parentInjector.get(import18.ApplicationRef));
     this._appEl_0.initComponent(this._WeatherApp_0_5,[],compView_0);
     compView_0.create(this._WeatherApp_0_5,this.projectableNodes,null);
     this.init([].concat([this._el_0]),[this._el_0],[],[]);
     return this._appEl_0;
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import18.WeatherAPI) && (0 === requestNodeIndex))) { return this._WeatherAPI_0_4; }
+    if (((token === import16.WeatherAPI) && (0 === requestNodeIndex))) { return this._WeatherAPI_0_4; }
     if (((token === import7.WeatherApp) && (0 === requestNodeIndex))) { return this._WeatherApp_0_5; }
-    if (((token === import19.WeatherData) && (0 === requestNodeIndex))) { return this._WeatherData_0_6; }
+    if (((token === import17.WeatherData) && (0 === requestNodeIndex))) { return this._WeatherData_0_6; }
     return notFoundResult;
   }
 }
@@ -248,4 +269,4 @@ function viewFactory_WeatherApp_Host0(viewUtils:import9.ViewUtils,parentInjector
   if ((renderType_WeatherApp_Host === null)) { (renderType_WeatherApp_Host = viewUtils.createRenderComponentType('',0,import15.ViewEncapsulation.Emulated,styles_WeatherApp_Host)); }
   return new _View_WeatherApp_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const WeatherAppNgFactory:import21.ComponentFactory<import7.WeatherApp> = new import21.ComponentFactory<import7.WeatherApp>('weather-app',viewFactory_WeatherApp_Host0,import7.WeatherApp);
+export const WeatherAppNgFactory:import19.ComponentFactory<import7.WeatherApp> = new import19.ComponentFactory<import7.WeatherApp>('weather-app',viewFactory_WeatherApp_Host0,import7.WeatherApp);
