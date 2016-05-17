@@ -4,22 +4,184 @@
  */
 import * as import0 from './weather-card.css.shim';
 import * as import1 from '@angular/core/src/linker/debug_context';
-import * as import2 from '@angular/common/src/directives/ng_class';
-import * as import3 from '@angular/core/src/render/api';
-import * as import4 from '@angular/core/src/linker/view';
-import * as import5 from './weather-card';
-import * as import6 from '@angular/core/src/linker/view_utils';
-import * as import7 from '@angular/core/src/di/injector';
-import * as import8 from '@angular/core/src/linker/element';
-import * as import9 from '@angular/core/src/linker/view_type';
-import * as import10 from '@angular/core/src/change_detection/change_detection';
-import * as import11 from '@angular/core/src/change_detection/differs/iterable_differs';
-import * as import12 from '@angular/core/src/change_detection/differs/keyvalue_differs';
-import * as import13 from '@angular/core/src/linker/element_ref';
-import * as import14 from '@angular/core/src/metadata/view';
-import * as import15 from '@angular/core/src/linker/component_factory';
+import * as import2 from '@angular/core/src/linker/template_ref';
+import * as import3 from '@angular/common/src/directives/ng_if';
+import * as import4 from '@angular/core/src/render/api';
+import * as import5 from '@angular/core/src/linker/view';
+import * as import6 from './weather-card';
+import * as import7 from '@angular/core/src/linker/element';
+import * as import8 from '@angular/core/src/linker/view_utils';
+import * as import9 from '@angular/core/src/di/injector';
+import * as import10 from '@angular/core/src/linker/view_type';
+import * as import11 from '@angular/core/src/change_detection/change_detection';
+import * as import12 from '@angular/core/src/metadata/view';
+import * as import13 from '@angular/common/src/directives/ng_class';
+import * as import14 from '@angular/common/src/directives/ng_for';
+import * as import15 from '@angular/core/src/change_detection/differs/iterable_differs';
+import * as import16 from '@angular/core/src/change_detection/differs/keyvalue_differs';
+import * as import17 from '@angular/core/src/linker/element_ref';
+import * as import18 from '@angular/core/src/linker/component_factory';
 const styles_WeatherCard:any[] = [import0.styles];
 const nodeDebugInfos_WeatherCard0:import1.StaticNodeDebugInfo[] = [
+  new import1.StaticNodeDebugInfo([
+    import2.TemplateRef,
+    import3.NgIf
+  ]
+  ,null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([
+    import2.TemplateRef,
+    import3.NgIf
+  ]
+  ,null,{}),
+  new import1.StaticNodeDebugInfo([],null,{})
+]
+;
+var renderType_WeatherCard:import4.RenderComponentType = null;
+class _View_WeatherCard0 extends import5.DebugAppView<import6.WeatherCard> {
+  _anchor_0: any;
+  private _appEl_0:import7.AppElement;
+  _TemplateRef_0_5:any;
+  _NgIf_0_6:import3.NgIf;
+  _text_1: any;
+  _anchor_2: any;
+  private _appEl_2:import7.AppElement;
+  _TemplateRef_2_5:any;
+  _NgIf_2_6:import3.NgIf;
+  _text_3: any;
+  private _expr_0: any;
+  private _expr_1: any;
+  constructor(viewUtils:import8.ViewUtils,parentInjector:import9.Injector,declarationEl:import7.AppElement) {
+    super(_View_WeatherCard0,renderType_WeatherCard,import10.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import11.ChangeDetectionStrategy.CheckAlways,nodeDebugInfos_WeatherCard0);
+  }
+  createInternal(rootSelector:string):import7.AppElement {
+    const parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
+    this._anchor_0 = this.renderer.createTemplateAnchor(parentRenderNode,this.debug(0,0,0));
+    this._appEl_0 = new import7.AppElement(0,null,this,this._anchor_0);
+    this._TemplateRef_0_5 = new import2.TemplateRef_(this._appEl_0,viewFactory_WeatherCard1);
+    this._NgIf_0_6 = new import3.NgIf(this._appEl_0.vcRef,this._TemplateRef_0_5);
+    this._text_1 = this.renderer.createText(parentRenderNode,'\n\n',this.debug(1,4,6));
+    this._anchor_2 = this.renderer.createTemplateAnchor(parentRenderNode,this.debug(2,6,0));
+    this._appEl_2 = new import7.AppElement(2,null,this,this._anchor_2);
+    this._TemplateRef_2_5 = new import2.TemplateRef_(this._appEl_2,viewFactory_WeatherCard2);
+    this._NgIf_2_6 = new import3.NgIf(this._appEl_2.vcRef,this._TemplateRef_2_5);
+    this._text_3 = this.renderer.createText(parentRenderNode,'\n',this.debug(3,45,8));
+    this._expr_0 = import11.uninitialized;
+    this._expr_1 = import11.uninitialized;
+    this.init([],[
+      this._anchor_0,
+      this._text_1,
+      this._anchor_2,
+      this._text_3
+    ]
+    ,[],[]);
+    return null;
+  }
+  injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
+    if (((token === import2.TemplateRef) && (0 === requestNodeIndex))) { return this._TemplateRef_0_5; }
+    if (((token === import3.NgIf) && (0 === requestNodeIndex))) { return this._NgIf_0_6; }
+    if (((token === import2.TemplateRef) && (2 === requestNodeIndex))) { return this._TemplateRef_2_5; }
+    if (((token === import3.NgIf) && (2 === requestNodeIndex))) { return this._NgIf_2_6; }
+    return notFoundResult;
+  }
+  detectChangesInternal(throwOnChange:boolean):void {
+    this.debug(0,0,5);
+    const currVal_0:boolean = !this.context.temperature;
+    if (import8.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
+      this._NgIf_0_6.ngIf = currVal_0;
+      this.renderer.setBindingDebugInfo(this._anchor_0,'ng-reflect-ng-if',((currVal_0 == null)? null: currVal_0.toString()));
+      this._expr_0 = currVal_0;
+    }
+    this.debug(2,6,5);
+    const currVal_1 = this.context.temperature;
+    if (import8.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
+      this._NgIf_2_6.ngIf = currVal_1;
+      this.renderer.setBindingDebugInfo(this._anchor_2,'ng-reflect-ng-if',((currVal_1 == null)? null: currVal_1.toString()));
+      this._expr_1 = currVal_1;
+    }
+    this.detectContentChildrenChanges(throwOnChange);
+    this.detectViewChildrenChanges(throwOnChange);
+  }
+}
+export function viewFactory_WeatherCard0(viewUtils:import8.ViewUtils,parentInjector:import9.Injector,declarationEl:import7.AppElement):import5.AppView<import6.WeatherCard> {
+  if ((renderType_WeatherCard === null)) { (renderType_WeatherCard = viewUtils.createRenderComponentType('/Users/robwormald/Dev/demos/ng2-pwa-demo/src/weather-card.html',0,import12.ViewEncapsulation.Emulated,styles_WeatherCard)); }
+  return new _View_WeatherCard0(viewUtils,parentInjector,declarationEl);
+}
+const nodeDebugInfos_WeatherCard1:import1.StaticNodeDebugInfo[] = [
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{})
+]
+;
+class _View_WeatherCard1 extends import5.DebugAppView<any> {
+  _el_0: any;
+  _text_1: any;
+  _el_2: any;
+  _text_3: any;
+  _el_4: any;
+  _text_5: any;
+  _text_6: any;
+  _el_7: any;
+  _text_8: any;
+  _text_9: any;
+  private _expr_0: any;
+  constructor(viewUtils:import8.ViewUtils,parentInjector:import9.Injector,declarationEl:import7.AppElement) {
+    super(_View_WeatherCard1,renderType_WeatherCard,import10.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import11.ChangeDetectionStrategy.CheckAlways,nodeDebugInfos_WeatherCard1);
+  }
+  createInternal(rootSelector:string):import7.AppElement {
+    this._el_0 = this.renderer.createElement(null,'div',this.debug(0,0,0));
+    this.renderer.setElementAttribute(this._el_0,'class','card cardTemplate weather-forecast');
+    this._text_1 = this.renderer.createText(this._el_0,'\n    ',this.debug(1,0,69));
+    this._el_2 = this.renderer.createElement(this._el_0,'div',this.debug(2,1,4));
+    this.renderer.setElementAttribute(this._el_2,'class','city-key');
+    this.renderer.setElementAttribute(this._el_2,'hidden','');
+    this._text_3 = this.renderer.createText(this._el_0,'\n    ',this.debug(3,1,39));
+    this._el_4 = this.renderer.createElement(this._el_0,'div',this.debug(4,2,4));
+    this.renderer.setElementAttribute(this._el_4,'class','location');
+    this._text_5 = this.renderer.createText(this._el_4,'',this.debug(5,2,26));
+    this._text_6 = this.renderer.createText(this._el_0,'\n    ',this.debug(6,2,40));
+    this._el_7 = this.renderer.createElement(this._el_0,'div',this.debug(7,3,4));
+    this.renderer.setElementAttribute(this._el_7,'class','description');
+    this._text_8 = this.renderer.createText(this._el_7,'Loading...',this.debug(8,3,29));
+    this._text_9 = this.renderer.createText(this._el_0,'\n',this.debug(9,3,45));
+    this._expr_0 = import11.uninitialized;
+    this.init([].concat([this._el_0]),[
+      this._el_0,
+      this._text_1,
+      this._el_2,
+      this._text_3,
+      this._el_4,
+      this._text_5,
+      this._text_6,
+      this._el_7,
+      this._text_8,
+      this._text_9
+    ]
+    ,[],[]);
+    return null;
+  }
+  detectChangesInternal(throwOnChange:boolean):void {
+    this.detectContentChildrenChanges(throwOnChange);
+    this.debug(5,2,26);
+    const currVal_0 = import8.interpolate(1,'',this.parent.context.name,'');
+    if (import8.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
+      this.renderer.setText(this._text_5,currVal_0);
+      this._expr_0 = currVal_0;
+    }
+    this.detectViewChildrenChanges(throwOnChange);
+  }
+}
+function viewFactory_WeatherCard1(viewUtils:import8.ViewUtils,parentInjector:import9.Injector,declarationEl:import7.AppElement):import5.AppView<any> {
+  return new _View_WeatherCard1(viewUtils,parentInjector,declarationEl);
+}
+const nodeDebugInfos_WeatherCard2:import1.StaticNodeDebugInfo[] = [
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
@@ -35,9 +197,9 @@ const nodeDebugInfos_WeatherCard0:import1.StaticNodeDebugInfo[] = [
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([import2.NgClass],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([import13.NgClass],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
@@ -80,106 +242,371 @@ const nodeDebugInfos_WeatherCard0:import1.StaticNodeDebugInfo[] = [
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([
+    import2.TemplateRef,
+    import14.NgFor
+  ]
+  ,null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
-  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{})
+]
+;
+class _View_WeatherCard2 extends import5.DebugAppView<any> {
+  _el_0: any;
+  _text_1: any;
+  _el_2: any;
+  _text_3: any;
+  _el_4: any;
+  _text_5: any;
+  _text_6: any;
+  _el_7: any;
+  _text_8: any;
+  _text_9: any;
+  _el_10: any;
+  _text_11: any;
+  _text_12: any;
+  _el_13: any;
+  _text_14: any;
+  _el_15: any;
+  _text_16: any;
+  _el_17: any;
+  _NgClass_17_3:import13.NgClass;
+  _text_18: any;
+  _el_19: any;
+  _text_20: any;
+  _el_21: any;
+  _text_22: any;
+  _el_23: any;
+  _text_24: any;
+  _text_25: any;
+  _text_26: any;
+  _text_27: any;
+  _el_28: any;
+  _text_29: any;
+  _el_30: any;
+  _text_31: any;
+  _el_32: any;
+  _text_33: any;
+  _el_34: any;
+  _text_35: any;
+  _text_36: any;
+  _text_37: any;
+  _el_38: any;
+  _text_39: any;
+  _text_40: any;
+  _el_41: any;
+  _text_42: any;
+  _text_43: any;
+  _el_44: any;
+  _text_45: any;
+  _el_46: any;
+  _text_47: any;
+  _text_48: any;
+  _el_49: any;
+  _text_50: any;
+  _text_51: any;
+  _el_52: any;
+  _text_53: any;
+  _text_54: any;
+  _text_55: any;
+  _text_56: any;
+  _text_57: any;
+  _el_58: any;
+  _text_59: any;
+  _anchor_60: any;
+  private _appEl_60:import7.AppElement;
+  _TemplateRef_60_5:any;
+  _NgFor_60_6:import14.NgFor;
+  _text_61: any;
+  _text_62: any;
+  private _expr_0: any;
+  private _expr_1: any;
+  private _expr_2: any;
+  private _expr_3: any;
+  private _expr_4: any;
+  private _expr_5: any;
+  private _expr_6: any;
+  private _expr_7: any;
+  private _expr_8: any;
+  private _expr_9: any;
+  private _expr_10: any;
+  private _expr_11: any;
+  constructor(viewUtils:import8.ViewUtils,parentInjector:import9.Injector,declarationEl:import7.AppElement) {
+    super(_View_WeatherCard2,renderType_WeatherCard,import10.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import11.ChangeDetectionStrategy.CheckAlways,nodeDebugInfos_WeatherCard2);
+  }
+  createInternal(rootSelector:string):import7.AppElement {
+    this._el_0 = this.renderer.createElement(null,'div',this.debug(0,6,0));
+    this.renderer.setElementAttribute(this._el_0,'class','card cardTemplate weather-forecast');
+    this._text_1 = this.renderer.createText(this._el_0,'\n    ',this.debug(1,6,68));
+    this._el_2 = this.renderer.createElement(this._el_0,'div',this.debug(2,7,4));
+    this.renderer.setElementAttribute(this._el_2,'class','city-key');
+    this.renderer.setElementAttribute(this._el_2,'hidden','');
+    this._text_3 = this.renderer.createText(this._el_0,'\n    ',this.debug(3,7,39));
+    this._el_4 = this.renderer.createElement(this._el_0,'div',this.debug(4,8,4));
+    this.renderer.setElementAttribute(this._el_4,'class','location');
+    this._text_5 = this.renderer.createText(this._el_4,'',this.debug(5,8,26));
+    this._text_6 = this.renderer.createText(this._el_0,'\n    ',this.debug(6,8,40));
+    this._el_7 = this.renderer.createElement(this._el_0,'div',this.debug(7,9,4));
+    this.renderer.setElementAttribute(this._el_7,'class','date');
+    this._text_8 = this.renderer.createText(this._el_7,'',this.debug(8,9,22));
+    this._text_9 = this.renderer.createText(this._el_0,'\n    ',this.debug(9,9,36));
+    this._el_10 = this.renderer.createElement(this._el_0,'div',this.debug(10,10,4));
+    this.renderer.setElementAttribute(this._el_10,'class','description');
+    this._text_11 = this.renderer.createText(this._el_10,'',this.debug(11,10,29));
+    this._text_12 = this.renderer.createText(this._el_0,'\n    ',this.debug(12,10,46));
+    this._el_13 = this.renderer.createElement(this._el_0,'div',this.debug(13,11,4));
+    this.renderer.setElementAttribute(this._el_13,'class','current');
+    this._text_14 = this.renderer.createText(this._el_13,'\n      ',this.debug(14,11,25));
+    this._el_15 = this.renderer.createElement(this._el_13,'div',this.debug(15,12,6));
+    this.renderer.setElementAttribute(this._el_15,'class','visual');
+    this._text_16 = this.renderer.createText(this._el_15,'\n        ',this.debug(16,12,26));
+    this._el_17 = this.renderer.createElement(this._el_15,'div',this.debug(17,13,8));
+    this.renderer.setElementAttribute(this._el_17,'class','icon');
+    this._NgClass_17_3 = new import13.NgClass(this.parentInjector.get(import15.IterableDiffers),this.parentInjector.get(import16.KeyValueDiffers),new import17.ElementRef(this._el_17),this.renderer);
+    this._text_18 = this.renderer.createText(this._el_15,'\n        ',this.debug(18,13,49));
+    this._el_19 = this.renderer.createElement(this._el_15,'div',this.debug(19,14,8));
+    this.renderer.setElementAttribute(this._el_19,'class','temperature');
+    this._text_20 = this.renderer.createText(this._el_19,'\n          ',this.debug(20,14,33));
+    this._el_21 = this.renderer.createElement(this._el_19,'span',this.debug(21,15,10));
+    this.renderer.setElementAttribute(this._el_21,'class','value');
+    this._text_22 = this.renderer.createText(this._el_21,'',this.debug(22,15,30));
+    this._el_23 = this.renderer.createElement(this._el_19,'span',this.debug(23,15,52));
+    this.renderer.setElementAttribute(this._el_23,'class','scale');
+    this._text_24 = this.renderer.createText(this._el_23,'°F',this.debug(24,15,72));
+    this._text_25 = this.renderer.createText(this._el_19,'\n        ',this.debug(25,15,81));
+    this._text_26 = this.renderer.createText(this._el_15,'\n      ',this.debug(26,16,14));
+    this._text_27 = this.renderer.createText(this._el_13,'\n      ',this.debug(27,17,12));
+    this._el_28 = this.renderer.createElement(this._el_13,'div',this.debug(28,18,6));
+    this.renderer.setElementAttribute(this._el_28,'class','description');
+    this._text_29 = this.renderer.createText(this._el_28,'\n        ',this.debug(29,18,31));
+    this._el_30 = this.renderer.createElement(this._el_28,'div',this.debug(30,19,8));
+    this.renderer.setElementAttribute(this._el_30,'class','feels-like');
+    this._text_31 = this.renderer.createText(this._el_30,'\n          ',this.debug(31,19,32));
+    this._el_32 = this.renderer.createElement(this._el_30,'span',this.debug(32,20,10));
+    this.renderer.setElementAttribute(this._el_32,'class','value');
+    this._text_33 = this.renderer.createText(this._el_32,'',this.debug(33,20,30));
+    this._el_34 = this.renderer.createElement(this._el_30,'span',this.debug(34,20,53));
+    this.renderer.setElementAttribute(this._el_34,'class','scale');
+    this._text_35 = this.renderer.createText(this._el_34,'°F',this.debug(35,20,73));
+    this._text_36 = this.renderer.createText(this._el_30,'\n        ',this.debug(36,20,82));
+    this._text_37 = this.renderer.createText(this._el_28,'\n        ',this.debug(37,21,14));
+    this._el_38 = this.renderer.createElement(this._el_28,'div',this.debug(38,22,8));
+    this.renderer.setElementAttribute(this._el_38,'class','precip');
+    this._text_39 = this.renderer.createText(this._el_38,'',this.debug(39,22,28));
+    this._text_40 = this.renderer.createText(this._el_28,'\n        ',this.debug(40,22,50));
+    this._el_41 = this.renderer.createElement(this._el_28,'div',this.debug(41,23,8));
+    this.renderer.setElementAttribute(this._el_41,'class','humidity');
+    this._text_42 = this.renderer.createText(this._el_41,'',this.debug(42,23,30));
+    this._text_43 = this.renderer.createText(this._el_28,'\n        ',this.debug(43,23,49));
+    this._el_44 = this.renderer.createElement(this._el_28,'div',this.debug(44,24,8));
+    this.renderer.setElementAttribute(this._el_44,'class','wind');
+    this._text_45 = this.renderer.createText(this._el_44,'\n          ',this.debug(45,24,26));
+    this._el_46 = this.renderer.createElement(this._el_44,'span',this.debug(46,25,10));
+    this.renderer.setElementAttribute(this._el_46,'class','value');
+    this._text_47 = this.renderer.createText(this._el_46,'',this.debug(47,25,30));
+    this._text_48 = this.renderer.createText(this._el_44,'\n          ',this.debug(48,25,50));
+    this._el_49 = this.renderer.createElement(this._el_44,'span',this.debug(49,26,10));
+    this.renderer.setElementAttribute(this._el_49,'class','scale');
+    this._text_50 = this.renderer.createText(this._el_49,'mph',this.debug(50,26,30));
+    this._text_51 = this.renderer.createText(this._el_44,'\n          ',this.debug(51,26,40));
+    this._el_52 = this.renderer.createElement(this._el_44,'span',this.debug(52,27,10));
+    this.renderer.setElementAttribute(this._el_52,'class','direction');
+    this._text_53 = this.renderer.createText(this._el_52,'',this.debug(53,27,34));
+    this._text_54 = this.renderer.createText(this._el_44,'°\n        ',this.debug(54,27,56));
+    this._text_55 = this.renderer.createText(this._el_28,'\n      ',this.debug(55,28,14));
+    this._text_56 = this.renderer.createText(this._el_13,'\n    ',this.debug(56,29,12));
+    this._text_57 = this.renderer.createText(this._el_0,'\n    ',this.debug(57,30,10));
+    this._el_58 = this.renderer.createElement(this._el_0,'div',this.debug(58,31,4));
+    this.renderer.setElementAttribute(this._el_58,'class','future');
+    this._text_59 = this.renderer.createText(this._el_58,'\n\n      ',this.debug(59,31,24));
+    this._anchor_60 = this.renderer.createTemplateAnchor(this._el_58,this.debug(60,33,6));
+    this._appEl_60 = new import7.AppElement(60,58,this,this._anchor_60);
+    this._TemplateRef_60_5 = new import2.TemplateRef_(this._appEl_60,viewFactory_WeatherCard3);
+    this._NgFor_60_6 = new import14.NgFor(this._appEl_60.vcRef,this._TemplateRef_60_5,this.parentInjector.get(import15.IterableDiffers),this.parent.ref);
+    this._text_61 = this.renderer.createText(this._el_58,'\n\n    ',this.debug(61,42,12));
+    this._text_62 = this.renderer.createText(this._el_0,'\n  ',this.debug(62,44,10));
+    this._expr_0 = import11.uninitialized;
+    this._expr_1 = import11.uninitialized;
+    this._expr_2 = import11.uninitialized;
+    this._expr_3 = import11.uninitialized;
+    this._expr_4 = import11.uninitialized;
+    this._expr_5 = import11.uninitialized;
+    this._expr_6 = import11.uninitialized;
+    this._expr_7 = import11.uninitialized;
+    this._expr_8 = import11.uninitialized;
+    this._expr_9 = import11.uninitialized;
+    this._expr_10 = import11.uninitialized;
+    this._expr_11 = import11.uninitialized;
+    this.init([].concat([this._el_0]),[
+      this._el_0,
+      this._text_1,
+      this._el_2,
+      this._text_3,
+      this._el_4,
+      this._text_5,
+      this._text_6,
+      this._el_7,
+      this._text_8,
+      this._text_9,
+      this._el_10,
+      this._text_11,
+      this._text_12,
+      this._el_13,
+      this._text_14,
+      this._el_15,
+      this._text_16,
+      this._el_17,
+      this._text_18,
+      this._el_19,
+      this._text_20,
+      this._el_21,
+      this._text_22,
+      this._el_23,
+      this._text_24,
+      this._text_25,
+      this._text_26,
+      this._text_27,
+      this._el_28,
+      this._text_29,
+      this._el_30,
+      this._text_31,
+      this._el_32,
+      this._text_33,
+      this._el_34,
+      this._text_35,
+      this._text_36,
+      this._text_37,
+      this._el_38,
+      this._text_39,
+      this._text_40,
+      this._el_41,
+      this._text_42,
+      this._text_43,
+      this._el_44,
+      this._text_45,
+      this._el_46,
+      this._text_47,
+      this._text_48,
+      this._el_49,
+      this._text_50,
+      this._text_51,
+      this._el_52,
+      this._text_53,
+      this._text_54,
+      this._text_55,
+      this._text_56,
+      this._text_57,
+      this._el_58,
+      this._text_59,
+      this._anchor_60,
+      this._text_61,
+      this._text_62
+    ]
+    ,[],[]);
+    return null;
+  }
+  injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
+    if (((token === import13.NgClass) && (17 === requestNodeIndex))) { return this._NgClass_17_3; }
+    if (((token === import2.TemplateRef) && (60 === requestNodeIndex))) { return this._TemplateRef_60_5; }
+    if (((token === import14.NgFor) && (60 === requestNodeIndex))) { return this._NgFor_60_6; }
+    return notFoundResult;
+  }
+  detectChangesInternal(throwOnChange:boolean):void {
+    this.debug(17,13,26);
+    const currVal_3 = this.parent.context.icon;
+    if (import8.checkBinding(throwOnChange,this._expr_3,currVal_3)) {
+      this._NgClass_17_3.rawClass = currVal_3;
+      this.renderer.setBindingDebugInfo(this._el_17,'ng-reflect-raw-class',((currVal_3 == null)? null: currVal_3.toString()));
+      this._expr_3 = currVal_3;
+    }
+    this.debug(17,13,13);
+    const currVal_4 = 'icon';
+    if (import8.checkBinding(throwOnChange,this._expr_4,currVal_4)) {
+      this._NgClass_17_3.initialClasses = currVal_4;
+      this.renderer.setBindingDebugInfo(this._el_17,'ng-reflect-initial-classes',((currVal_4 == null)? null: currVal_4.toString()));
+      this._expr_4 = currVal_4;
+    }
+    if (!throwOnChange) { this._NgClass_17_3.ngDoCheck(); }
+    this.debug(60,33,26);
+    const currVal_11 = this.parent.context.forecast;
+    if (import8.checkBinding(throwOnChange,this._expr_11,currVal_11)) {
+      this._NgFor_60_6.ngForOf = currVal_11;
+      this.renderer.setBindingDebugInfo(this._anchor_60,'ng-reflect-ng-for-of',((currVal_11 == null)? null: currVal_11.toString()));
+      this._expr_11 = currVal_11;
+    }
+    if (!throwOnChange) { this._NgFor_60_6.ngDoCheck(); }
+    this.detectContentChildrenChanges(throwOnChange);
+    this.debug(5,8,26);
+    const currVal_0 = import8.interpolate(1,'',this.parent.context.name,'');
+    if (import8.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
+      this.renderer.setText(this._text_5,currVal_0);
+      this._expr_0 = currVal_0;
+    }
+    this.debug(8,9,22);
+    const currVal_1 = import8.interpolate(1,'',this.parent.context.time,'');
+    if (import8.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
+      this.renderer.setText(this._text_8,currVal_1);
+      this._expr_1 = currVal_1;
+    }
+    this.debug(11,10,29);
+    const currVal_2 = import8.interpolate(1,'',this.parent.context.summary,'');
+    if (import8.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
+      this.renderer.setText(this._text_11,currVal_2);
+      this._expr_2 = currVal_2;
+    }
+    this.debug(22,15,30);
+    const currVal_5 = import8.interpolate(1,'',this.parent.context.temperature,'');
+    if (import8.checkBinding(throwOnChange,this._expr_5,currVal_5)) {
+      this.renderer.setText(this._text_22,currVal_5);
+      this._expr_5 = currVal_5;
+    }
+    this.debug(33,20,30);
+    const currVal_6 = import8.interpolate(1,'',this.parent.context.apparentTemp,'');
+    if (import8.checkBinding(throwOnChange,this._expr_6,currVal_6)) {
+      this.renderer.setText(this._text_33,currVal_6);
+      this._expr_6 = currVal_6;
+    }
+    this.debug(39,22,28);
+    const currVal_7 = import8.interpolate(1,'',this.parent.context.probability,'%');
+    if (import8.checkBinding(throwOnChange,this._expr_7,currVal_7)) {
+      this.renderer.setText(this._text_39,currVal_7);
+      this._expr_7 = currVal_7;
+    }
+    this.debug(42,23,30);
+    const currVal_8 = import8.interpolate(1,'',this.parent.context.humidity,'%');
+    if (import8.checkBinding(throwOnChange,this._expr_8,currVal_8)) {
+      this.renderer.setText(this._text_42,currVal_8);
+      this._expr_8 = currVal_8;
+    }
+    this.debug(47,25,30);
+    const currVal_9 = import8.interpolate(1,'',this.parent.context.windSpeed,'');
+    if (import8.checkBinding(throwOnChange,this._expr_9,currVal_9)) {
+      this.renderer.setText(this._text_47,currVal_9);
+      this._expr_9 = currVal_9;
+    }
+    this.debug(53,27,34);
+    const currVal_10 = import8.interpolate(1,'',this.parent.context.windBearing,'');
+    if (import8.checkBinding(throwOnChange,this._expr_10,currVal_10)) {
+      this.renderer.setText(this._text_53,currVal_10);
+      this._expr_10 = currVal_10;
+    }
+    this.detectViewChildrenChanges(throwOnChange);
+  }
+  destroyInternal():void {
+    this.debug(17,13,8);
+    this._NgClass_17_3.ngOnDestroy();
+  }
+}
+function viewFactory_WeatherCard2(viewUtils:import8.ViewUtils,parentInjector:import9.Injector,declarationEl:import7.AppElement):import5.AppView<any> {
+  return new _View_WeatherCard2(viewUtils,parentInjector,declarationEl);
+}
+const nodeDebugInfos_WeatherCard3:import1.StaticNodeDebugInfo[] = [
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([],null,{}),
+  new import1.StaticNodeDebugInfo([import13.NgClass],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
   new import1.StaticNodeDebugInfo([],null,{}),
@@ -195,682 +622,168 @@ const nodeDebugInfos_WeatherCard0:import1.StaticNodeDebugInfo[] = [
   new import1.StaticNodeDebugInfo([],null,{})
 ]
 ;
-var renderType_WeatherCard:import3.RenderComponentType = null;
-class _View_WeatherCard0 extends import4.DebugAppView<import5.WeatherCard> {
+class _View_WeatherCard3 extends import5.DebugAppView<any> {
   _el_0: any;
   _text_1: any;
   _el_2: any;
   _text_3: any;
-  _el_4: any;
-  _text_5: any;
+  _text_4: any;
+  _el_5: any;
+  _NgClass_5_3:import13.NgClass;
   _text_6: any;
   _el_7: any;
   _text_8: any;
   _el_9: any;
   _text_10: any;
-  _el_11: any;
+  _text_11: any;
   _text_12: any;
   _el_13: any;
   _text_14: any;
   _el_15: any;
-  _NgClass_15_3:import2.NgClass;
   _text_16: any;
-  _el_17: any;
+  _text_17: any;
   _text_18: any;
-  _el_19: any;
-  _el_20: any;
-  _text_21: any;
-  _text_22: any;
-  _text_23: any;
-  _text_24: any;
-  _el_25: any;
-  _text_26: any;
-  _el_27: any;
-  _text_28: any;
-  _el_29: any;
-  _el_30: any;
-  _text_31: any;
-  _text_32: any;
-  _text_33: any;
-  _el_34: any;
-  _text_35: any;
-  _el_36: any;
-  _text_37: any;
-  _el_38: any;
-  _text_39: any;
-  _el_40: any;
-  _text_41: any;
-  _el_42: any;
-  _text_43: any;
-  _text_44: any;
-  _el_45: any;
-  _text_46: any;
-  _text_47: any;
-  _text_48: any;
-  _text_49: any;
-  _el_50: any;
-  _text_51: any;
-  _el_52: any;
-  _text_53: any;
-  _el_54: any;
-  _text_55: any;
-  _el_56: any;
-  _text_57: any;
-  _el_58: any;
-  _text_59: any;
-  _el_60: any;
-  _text_61: any;
-  _text_62: any;
-  _el_63: any;
-  _text_64: any;
-  _el_65: any;
-  _text_66: any;
-  _text_67: any;
-  _text_68: any;
-  _el_69: any;
-  _text_70: any;
-  _el_71: any;
-  _text_72: any;
-  _el_73: any;
-  _text_74: any;
-  _el_75: any;
-  _text_76: any;
-  _el_77: any;
-  _text_78: any;
-  _text_79: any;
-  _el_80: any;
-  _text_81: any;
-  _el_82: any;
-  _text_83: any;
-  _text_84: any;
-  _text_85: any;
-  _el_86: any;
-  _text_87: any;
-  _el_88: any;
-  _text_89: any;
-  _el_90: any;
-  _text_91: any;
-  _el_92: any;
-  _text_93: any;
-  _el_94: any;
-  _text_95: any;
-  _text_96: any;
-  _el_97: any;
-  _text_98: any;
-  _el_99: any;
-  _text_100: any;
-  _text_101: any;
-  _text_102: any;
-  _el_103: any;
-  _text_104: any;
-  _el_105: any;
-  _text_106: any;
-  _el_107: any;
-  _text_108: any;
-  _el_109: any;
-  _text_110: any;
-  _el_111: any;
-  _text_112: any;
-  _text_113: any;
-  _el_114: any;
-  _text_115: any;
-  _el_116: any;
-  _text_117: any;
-  _text_118: any;
-  _text_119: any;
-  _el_120: any;
-  _text_121: any;
-  _el_122: any;
-  _text_123: any;
-  _el_124: any;
-  _text_125: any;
-  _el_126: any;
-  _text_127: any;
-  _el_128: any;
-  _text_129: any;
-  _text_130: any;
-  _el_131: any;
-  _text_132: any;
-  _el_133: any;
-  _text_134: any;
-  _text_135: any;
-  _text_136: any;
-  _el_137: any;
-  _text_138: any;
-  _el_139: any;
-  _text_140: any;
-  _el_141: any;
-  _text_142: any;
-  _el_143: any;
-  _text_144: any;
-  _el_145: any;
-  _text_146: any;
-  _text_147: any;
-  _el_148: any;
-  _text_149: any;
-  _el_150: any;
-  _text_151: any;
-  _text_152: any;
-  _text_153: any;
-  _el_154: any;
-  _text_155: any;
-  _el_156: any;
-  _text_157: any;
-  _el_158: any;
-  _text_159: any;
-  _el_160: any;
-  _text_161: any;
-  _el_162: any;
-  _text_163: any;
-  _text_164: any;
-  _el_165: any;
-  _text_166: any;
-  _el_167: any;
-  _text_168: any;
-  _text_169: any;
-  _text_170: any;
-  _text_171: any;
-  _text_172: any;
   private _expr_0: any;
   private _expr_1: any;
   private _expr_2: any;
-  constructor(viewUtils:import6.ViewUtils,parentInjector:import7.Injector,declarationEl:import8.AppElement) {
-    super(_View_WeatherCard0,renderType_WeatherCard,import9.ViewType.COMPONENT,viewUtils,parentInjector,declarationEl,import10.ChangeDetectionStrategy.CheckAlways,nodeDebugInfos_WeatherCard0);
+  private _expr_3: any;
+  private _expr_4: any;
+  constructor(viewUtils:import8.ViewUtils,parentInjector:import9.Injector,declarationEl:import7.AppElement) {
+    super(_View_WeatherCard3,renderType_WeatherCard,import10.ViewType.EMBEDDED,viewUtils,parentInjector,declarationEl,import11.ChangeDetectionStrategy.CheckAlways,nodeDebugInfos_WeatherCard3);
   }
-  createInternal(rootSelector:string):import8.AppElement {
-    const parentRenderNode = this.renderer.createViewRoot(this.declarationAppElement.nativeElement);
-    this._el_0 = this.renderer.createElement(parentRenderNode,'div',this.debug(0,0,0));
-    this.renderer.setElementAttribute(this._el_0,'class','card cardTemplate weather-forecast');
-    this._text_1 = this.renderer.createText(this._el_0,'\n    ',this.debug(1,0,48));
-    this._el_2 = this.renderer.createElement(this._el_0,'div',this.debug(2,1,4));
-    this.renderer.setElementAttribute(this._el_2,'class','city-key');
-    this.renderer.setElementAttribute(this._el_2,'hidden','');
-    this._text_3 = this.renderer.createText(this._el_0,'\n    ',this.debug(3,1,39));
-    this._el_4 = this.renderer.createElement(this._el_0,'div',this.debug(4,2,4));
-    this.renderer.setElementAttribute(this._el_4,'class','location');
-    this._text_5 = this.renderer.createText(this._el_4,'',this.debug(5,2,26));
-    this._text_6 = this.renderer.createText(this._el_0,'\n    ',this.debug(6,2,40));
-    this._el_7 = this.renderer.createElement(this._el_0,'div',this.debug(7,3,4));
-    this.renderer.setElementAttribute(this._el_7,'class','date');
-    this._text_8 = this.renderer.createText(this._el_0,'\n    ',this.debug(8,3,28));
-    this._el_9 = this.renderer.createElement(this._el_0,'div',this.debug(9,4,4));
-    this.renderer.setElementAttribute(this._el_9,'class','description');
-    this._text_10 = this.renderer.createText(this._el_0,'\n    ',this.debug(10,4,35));
-    this._el_11 = this.renderer.createElement(this._el_0,'div',this.debug(11,5,4));
-    this.renderer.setElementAttribute(this._el_11,'class','current');
-    this._text_12 = this.renderer.createText(this._el_11,'\n      ',this.debug(12,5,25));
-    this._el_13 = this.renderer.createElement(this._el_11,'div',this.debug(13,6,6));
-    this.renderer.setElementAttribute(this._el_13,'class','visual');
-    this._text_14 = this.renderer.createText(this._el_13,'\n        ',this.debug(14,6,26));
-    this._el_15 = this.renderer.createElement(this._el_13,'div',this.debug(15,7,8));
-    this.renderer.setElementAttribute(this._el_15,'class','icon');
-    this._NgClass_15_3 = new import2.NgClass(this.parentInjector.get(import11.IterableDiffers),this.parentInjector.get(import12.KeyValueDiffers),new import13.ElementRef(this._el_15),this.renderer);
-    this._text_16 = this.renderer.createText(this._el_13,'\n        ',this.debug(16,7,49));
-    this._el_17 = this.renderer.createElement(this._el_13,'div',this.debug(17,8,8));
-    this.renderer.setElementAttribute(this._el_17,'class','temperature');
-    this._text_18 = this.renderer.createText(this._el_17,'\n          ',this.debug(18,8,33));
-    this._el_19 = this.renderer.createElement(this._el_17,'span',this.debug(19,9,10));
-    this.renderer.setElementAttribute(this._el_19,'class','value');
-    this._el_20 = this.renderer.createElement(this._el_17,'span',this.debug(20,9,37));
-    this.renderer.setElementAttribute(this._el_20,'class','scale');
-    this._text_21 = this.renderer.createText(this._el_20,'°F',this.debug(21,9,57));
-    this._text_22 = this.renderer.createText(this._el_17,'\n        ',this.debug(22,9,66));
-    this._text_23 = this.renderer.createText(this._el_13,'\n      ',this.debug(23,10,14));
-    this._text_24 = this.renderer.createText(this._el_11,'\n      ',this.debug(24,11,12));
-    this._el_25 = this.renderer.createElement(this._el_11,'div',this.debug(25,12,6));
-    this.renderer.setElementAttribute(this._el_25,'class','description');
-    this._text_26 = this.renderer.createText(this._el_25,'\n        ',this.debug(26,12,31));
-    this._el_27 = this.renderer.createElement(this._el_25,'div',this.debug(27,13,8));
-    this.renderer.setElementAttribute(this._el_27,'class','feels-like');
-    this._text_28 = this.renderer.createText(this._el_27,'\n          ',this.debug(28,13,32));
-    this._el_29 = this.renderer.createElement(this._el_27,'span',this.debug(29,14,10));
-    this.renderer.setElementAttribute(this._el_29,'class','value');
-    this._el_30 = this.renderer.createElement(this._el_27,'span',this.debug(30,14,37));
-    this.renderer.setElementAttribute(this._el_30,'class','scale');
-    this._text_31 = this.renderer.createText(this._el_30,'°F',this.debug(31,14,57));
-    this._text_32 = this.renderer.createText(this._el_27,'\n        ',this.debug(32,14,66));
-    this._text_33 = this.renderer.createText(this._el_25,'\n        ',this.debug(33,15,14));
-    this._el_34 = this.renderer.createElement(this._el_25,'div',this.debug(34,16,8));
-    this.renderer.setElementAttribute(this._el_34,'class','precip');
-    this._text_35 = this.renderer.createText(this._el_25,'\n        ',this.debug(35,16,34));
-    this._el_36 = this.renderer.createElement(this._el_25,'div',this.debug(36,17,8));
-    this.renderer.setElementAttribute(this._el_36,'class','humidity');
-    this._text_37 = this.renderer.createText(this._el_25,'\n        ',this.debug(37,17,36));
-    this._el_38 = this.renderer.createElement(this._el_25,'div',this.debug(38,18,8));
-    this.renderer.setElementAttribute(this._el_38,'class','wind');
-    this._text_39 = this.renderer.createText(this._el_38,'\n          ',this.debug(39,18,26));
-    this._el_40 = this.renderer.createElement(this._el_38,'span',this.debug(40,19,10));
-    this.renderer.setElementAttribute(this._el_40,'class','value');
-    this._text_41 = this.renderer.createText(this._el_38,'\n          ',this.debug(41,19,37));
-    this._el_42 = this.renderer.createElement(this._el_38,'span',this.debug(42,20,10));
-    this.renderer.setElementAttribute(this._el_42,'class','scale');
-    this._text_43 = this.renderer.createText(this._el_42,'mph',this.debug(43,20,30));
-    this._text_44 = this.renderer.createText(this._el_38,'\n          ',this.debug(44,20,40));
-    this._el_45 = this.renderer.createElement(this._el_38,'span',this.debug(45,21,10));
-    this.renderer.setElementAttribute(this._el_45,'class','direction');
-    this._text_46 = this.renderer.createText(this._el_38,'°\n        ',this.debug(46,21,41));
-    this._text_47 = this.renderer.createText(this._el_25,'\n      ',this.debug(47,22,14));
-    this._text_48 = this.renderer.createText(this._el_11,'\n    ',this.debug(48,23,12));
-    this._text_49 = this.renderer.createText(this._el_0,'\n    ',this.debug(49,24,10));
-    this._el_50 = this.renderer.createElement(this._el_0,'div',this.debug(50,25,4));
-    this.renderer.setElementAttribute(this._el_50,'class','future');
-    this._text_51 = this.renderer.createText(this._el_50,'\n      ',this.debug(51,25,24));
-    this._el_52 = this.renderer.createElement(this._el_50,'div',this.debug(52,26,6));
-    this.renderer.setElementAttribute(this._el_52,'class','oneday');
-    this._text_53 = this.renderer.createText(this._el_52,'\n        ',this.debug(53,26,26));
-    this._el_54 = this.renderer.createElement(this._el_52,'div',this.debug(54,27,8));
-    this.renderer.setElementAttribute(this._el_54,'class','date');
-    this._text_55 = this.renderer.createText(this._el_52,'\n        ',this.debug(55,27,32));
-    this._el_56 = this.renderer.createElement(this._el_52,'div',this.debug(56,28,8));
-    this.renderer.setElementAttribute(this._el_56,'class','icon');
-    this._text_57 = this.renderer.createText(this._el_52,'\n        ',this.debug(57,28,32));
-    this._el_58 = this.renderer.createElement(this._el_52,'div',this.debug(58,29,8));
-    this.renderer.setElementAttribute(this._el_58,'class','temp-high');
-    this._text_59 = this.renderer.createText(this._el_58,'\n          ',this.debug(59,29,31));
-    this._el_60 = this.renderer.createElement(this._el_58,'span',this.debug(60,30,10));
-    this.renderer.setElementAttribute(this._el_60,'class','value');
-    this._text_61 = this.renderer.createText(this._el_58,'°\n        ',this.debug(61,30,37));
-    this._text_62 = this.renderer.createText(this._el_52,'\n        ',this.debug(62,31,14));
-    this._el_63 = this.renderer.createElement(this._el_52,'div',this.debug(63,32,8));
-    this.renderer.setElementAttribute(this._el_63,'class','temp-low');
-    this._text_64 = this.renderer.createText(this._el_63,'\n          ',this.debug(64,32,30));
-    this._el_65 = this.renderer.createElement(this._el_63,'span',this.debug(65,33,10));
-    this.renderer.setElementAttribute(this._el_65,'class','value');
-    this._text_66 = this.renderer.createText(this._el_63,'°\n        ',this.debug(66,33,37));
-    this._text_67 = this.renderer.createText(this._el_52,'\n      ',this.debug(67,34,14));
-    this._text_68 = this.renderer.createText(this._el_50,'\n      ',this.debug(68,35,12));
-    this._el_69 = this.renderer.createElement(this._el_50,'div',this.debug(69,36,6));
-    this.renderer.setElementAttribute(this._el_69,'class','oneday');
-    this._text_70 = this.renderer.createText(this._el_69,'\n        ',this.debug(70,36,26));
-    this._el_71 = this.renderer.createElement(this._el_69,'div',this.debug(71,37,8));
-    this.renderer.setElementAttribute(this._el_71,'class','date');
-    this._text_72 = this.renderer.createText(this._el_69,'\n        ',this.debug(72,37,32));
-    this._el_73 = this.renderer.createElement(this._el_69,'div',this.debug(73,38,8));
-    this.renderer.setElementAttribute(this._el_73,'class','icon');
-    this._text_74 = this.renderer.createText(this._el_69,'\n        ',this.debug(74,38,32));
-    this._el_75 = this.renderer.createElement(this._el_69,'div',this.debug(75,39,8));
-    this.renderer.setElementAttribute(this._el_75,'class','temp-high');
-    this._text_76 = this.renderer.createText(this._el_75,'\n          ',this.debug(76,39,31));
-    this._el_77 = this.renderer.createElement(this._el_75,'span',this.debug(77,40,10));
-    this.renderer.setElementAttribute(this._el_77,'class','value');
-    this._text_78 = this.renderer.createText(this._el_75,'°\n        ',this.debug(78,40,37));
-    this._text_79 = this.renderer.createText(this._el_69,'\n        ',this.debug(79,41,14));
-    this._el_80 = this.renderer.createElement(this._el_69,'div',this.debug(80,42,8));
-    this.renderer.setElementAttribute(this._el_80,'class','temp-low');
-    this._text_81 = this.renderer.createText(this._el_80,'\n          ',this.debug(81,42,30));
-    this._el_82 = this.renderer.createElement(this._el_80,'span',this.debug(82,43,10));
-    this.renderer.setElementAttribute(this._el_82,'class','value');
-    this._text_83 = this.renderer.createText(this._el_80,'°\n        ',this.debug(83,43,37));
-    this._text_84 = this.renderer.createText(this._el_69,'\n      ',this.debug(84,44,14));
-    this._text_85 = this.renderer.createText(this._el_50,'\n      ',this.debug(85,45,12));
-    this._el_86 = this.renderer.createElement(this._el_50,'div',this.debug(86,46,6));
-    this.renderer.setElementAttribute(this._el_86,'class','oneday');
-    this._text_87 = this.renderer.createText(this._el_86,'\n        ',this.debug(87,46,26));
-    this._el_88 = this.renderer.createElement(this._el_86,'div',this.debug(88,47,8));
-    this.renderer.setElementAttribute(this._el_88,'class','date');
-    this._text_89 = this.renderer.createText(this._el_86,'\n        ',this.debug(89,47,32));
-    this._el_90 = this.renderer.createElement(this._el_86,'div',this.debug(90,48,8));
-    this.renderer.setElementAttribute(this._el_90,'class','icon');
-    this._text_91 = this.renderer.createText(this._el_86,'\n        ',this.debug(91,48,32));
-    this._el_92 = this.renderer.createElement(this._el_86,'div',this.debug(92,49,8));
-    this.renderer.setElementAttribute(this._el_92,'class','temp-high');
-    this._text_93 = this.renderer.createText(this._el_92,'\n          ',this.debug(93,49,31));
-    this._el_94 = this.renderer.createElement(this._el_92,'span',this.debug(94,50,10));
-    this.renderer.setElementAttribute(this._el_94,'class','value');
-    this._text_95 = this.renderer.createText(this._el_92,'°\n        ',this.debug(95,50,37));
-    this._text_96 = this.renderer.createText(this._el_86,'\n        ',this.debug(96,51,14));
-    this._el_97 = this.renderer.createElement(this._el_86,'div',this.debug(97,52,8));
-    this.renderer.setElementAttribute(this._el_97,'class','temp-low');
-    this._text_98 = this.renderer.createText(this._el_97,'\n          ',this.debug(98,52,30));
-    this._el_99 = this.renderer.createElement(this._el_97,'span',this.debug(99,53,10));
-    this.renderer.setElementAttribute(this._el_99,'class','value');
-    this._text_100 = this.renderer.createText(this._el_97,'°\n        ',this.debug(100,53,37));
-    this._text_101 = this.renderer.createText(this._el_86,'\n      ',this.debug(101,54,14));
-    this._text_102 = this.renderer.createText(this._el_50,'\n      ',this.debug(102,55,12));
-    this._el_103 = this.renderer.createElement(this._el_50,'div',this.debug(103,56,6));
-    this.renderer.setElementAttribute(this._el_103,'class','oneday');
-    this._text_104 = this.renderer.createText(this._el_103,'\n        ',this.debug(104,56,26));
-    this._el_105 = this.renderer.createElement(this._el_103,'div',this.debug(105,57,8));
-    this.renderer.setElementAttribute(this._el_105,'class','date');
-    this._text_106 = this.renderer.createText(this._el_103,'\n        ',this.debug(106,57,32));
-    this._el_107 = this.renderer.createElement(this._el_103,'div',this.debug(107,58,8));
-    this.renderer.setElementAttribute(this._el_107,'class','icon');
-    this._text_108 = this.renderer.createText(this._el_103,'\n        ',this.debug(108,58,32));
-    this._el_109 = this.renderer.createElement(this._el_103,'div',this.debug(109,59,8));
-    this.renderer.setElementAttribute(this._el_109,'class','temp-high');
-    this._text_110 = this.renderer.createText(this._el_109,'\n          ',this.debug(110,59,31));
-    this._el_111 = this.renderer.createElement(this._el_109,'span',this.debug(111,60,10));
-    this.renderer.setElementAttribute(this._el_111,'class','value');
-    this._text_112 = this.renderer.createText(this._el_109,'°\n        ',this.debug(112,60,37));
-    this._text_113 = this.renderer.createText(this._el_103,'\n        ',this.debug(113,61,14));
-    this._el_114 = this.renderer.createElement(this._el_103,'div',this.debug(114,62,8));
-    this.renderer.setElementAttribute(this._el_114,'class','temp-low');
-    this._text_115 = this.renderer.createText(this._el_114,'\n          ',this.debug(115,62,30));
-    this._el_116 = this.renderer.createElement(this._el_114,'span',this.debug(116,63,10));
-    this.renderer.setElementAttribute(this._el_116,'class','value');
-    this._text_117 = this.renderer.createText(this._el_114,'°\n        ',this.debug(117,63,37));
-    this._text_118 = this.renderer.createText(this._el_103,'\n      ',this.debug(118,64,14));
-    this._text_119 = this.renderer.createText(this._el_50,'\n      ',this.debug(119,65,12));
-    this._el_120 = this.renderer.createElement(this._el_50,'div',this.debug(120,66,6));
-    this.renderer.setElementAttribute(this._el_120,'class','oneday');
-    this._text_121 = this.renderer.createText(this._el_120,'\n        ',this.debug(121,66,26));
-    this._el_122 = this.renderer.createElement(this._el_120,'div',this.debug(122,67,8));
-    this.renderer.setElementAttribute(this._el_122,'class','date');
-    this._text_123 = this.renderer.createText(this._el_120,'\n        ',this.debug(123,67,32));
-    this._el_124 = this.renderer.createElement(this._el_120,'div',this.debug(124,68,8));
-    this.renderer.setElementAttribute(this._el_124,'class','icon');
-    this._text_125 = this.renderer.createText(this._el_120,'\n        ',this.debug(125,68,32));
-    this._el_126 = this.renderer.createElement(this._el_120,'div',this.debug(126,69,8));
-    this.renderer.setElementAttribute(this._el_126,'class','temp-high');
-    this._text_127 = this.renderer.createText(this._el_126,'\n          ',this.debug(127,69,31));
-    this._el_128 = this.renderer.createElement(this._el_126,'span',this.debug(128,70,10));
-    this.renderer.setElementAttribute(this._el_128,'class','value');
-    this._text_129 = this.renderer.createText(this._el_126,'°\n        ',this.debug(129,70,37));
-    this._text_130 = this.renderer.createText(this._el_120,'\n        ',this.debug(130,71,14));
-    this._el_131 = this.renderer.createElement(this._el_120,'div',this.debug(131,72,8));
-    this.renderer.setElementAttribute(this._el_131,'class','temp-low');
-    this._text_132 = this.renderer.createText(this._el_131,'\n          ',this.debug(132,72,30));
-    this._el_133 = this.renderer.createElement(this._el_131,'span',this.debug(133,73,10));
-    this.renderer.setElementAttribute(this._el_133,'class','value');
-    this._text_134 = this.renderer.createText(this._el_131,'°\n        ',this.debug(134,73,37));
-    this._text_135 = this.renderer.createText(this._el_120,'\n      ',this.debug(135,74,14));
-    this._text_136 = this.renderer.createText(this._el_50,'\n      ',this.debug(136,75,12));
-    this._el_137 = this.renderer.createElement(this._el_50,'div',this.debug(137,76,6));
-    this.renderer.setElementAttribute(this._el_137,'class','oneday');
-    this._text_138 = this.renderer.createText(this._el_137,'\n        ',this.debug(138,76,26));
-    this._el_139 = this.renderer.createElement(this._el_137,'div',this.debug(139,77,8));
-    this.renderer.setElementAttribute(this._el_139,'class','date');
-    this._text_140 = this.renderer.createText(this._el_137,'\n        ',this.debug(140,77,32));
-    this._el_141 = this.renderer.createElement(this._el_137,'div',this.debug(141,78,8));
-    this.renderer.setElementAttribute(this._el_141,'class','icon');
-    this._text_142 = this.renderer.createText(this._el_137,'\n        ',this.debug(142,78,32));
-    this._el_143 = this.renderer.createElement(this._el_137,'div',this.debug(143,79,8));
-    this.renderer.setElementAttribute(this._el_143,'class','temp-high');
-    this._text_144 = this.renderer.createText(this._el_143,'\n          ',this.debug(144,79,31));
-    this._el_145 = this.renderer.createElement(this._el_143,'span',this.debug(145,80,10));
-    this.renderer.setElementAttribute(this._el_145,'class','value');
-    this._text_146 = this.renderer.createText(this._el_143,'°\n        ',this.debug(146,80,37));
-    this._text_147 = this.renderer.createText(this._el_137,'\n        ',this.debug(147,81,14));
-    this._el_148 = this.renderer.createElement(this._el_137,'div',this.debug(148,82,8));
-    this.renderer.setElementAttribute(this._el_148,'class','temp-low');
-    this._text_149 = this.renderer.createText(this._el_148,'\n          ',this.debug(149,82,30));
-    this._el_150 = this.renderer.createElement(this._el_148,'span',this.debug(150,83,10));
-    this.renderer.setElementAttribute(this._el_150,'class','value');
-    this._text_151 = this.renderer.createText(this._el_148,'°\n        ',this.debug(151,83,37));
-    this._text_152 = this.renderer.createText(this._el_137,'\n      ',this.debug(152,84,14));
-    this._text_153 = this.renderer.createText(this._el_50,'\n      ',this.debug(153,85,12));
-    this._el_154 = this.renderer.createElement(this._el_50,'div',this.debug(154,86,6));
-    this.renderer.setElementAttribute(this._el_154,'class','oneday');
-    this._text_155 = this.renderer.createText(this._el_154,'\n        ',this.debug(155,86,26));
-    this._el_156 = this.renderer.createElement(this._el_154,'div',this.debug(156,87,8));
-    this.renderer.setElementAttribute(this._el_156,'class','date');
-    this._text_157 = this.renderer.createText(this._el_154,'\n        ',this.debug(157,87,32));
-    this._el_158 = this.renderer.createElement(this._el_154,'div',this.debug(158,88,8));
-    this.renderer.setElementAttribute(this._el_158,'class','icon');
-    this._text_159 = this.renderer.createText(this._el_154,'\n        ',this.debug(159,88,32));
-    this._el_160 = this.renderer.createElement(this._el_154,'div',this.debug(160,89,8));
-    this.renderer.setElementAttribute(this._el_160,'class','temp-high');
-    this._text_161 = this.renderer.createText(this._el_160,'\n          ',this.debug(161,89,31));
-    this._el_162 = this.renderer.createElement(this._el_160,'span',this.debug(162,90,10));
-    this.renderer.setElementAttribute(this._el_162,'class','value');
-    this._text_163 = this.renderer.createText(this._el_160,'°\n        ',this.debug(163,90,37));
-    this._text_164 = this.renderer.createText(this._el_154,'\n        ',this.debug(164,91,14));
-    this._el_165 = this.renderer.createElement(this._el_154,'div',this.debug(165,92,8));
-    this.renderer.setElementAttribute(this._el_165,'class','temp-low');
-    this._text_166 = this.renderer.createText(this._el_165,'\n          ',this.debug(166,92,30));
-    this._el_167 = this.renderer.createElement(this._el_165,'span',this.debug(167,93,10));
-    this.renderer.setElementAttribute(this._el_167,'class','value');
-    this._text_168 = this.renderer.createText(this._el_165,'°\n        ',this.debug(168,93,37));
-    this._text_169 = this.renderer.createText(this._el_154,'\n      ',this.debug(169,94,14));
-    this._text_170 = this.renderer.createText(this._el_50,'\n    ',this.debug(170,95,12));
-    this._text_171 = this.renderer.createText(this._el_0,'\n  ',this.debug(171,96,10));
-    this._text_172 = this.renderer.createText(parentRenderNode,'\n',this.debug(172,97,8));
-    this._expr_0 = import10.uninitialized;
-    this._expr_1 = import10.uninitialized;
-    this._expr_2 = import10.uninitialized;
-    this.init([],[
+  createInternal(rootSelector:string):import7.AppElement {
+    this._el_0 = this.renderer.createElement(null,'div',this.debug(0,33,6));
+    this.renderer.setElementAttribute(this._el_0,'class','oneday');
+    this._text_1 = this.renderer.createText(this._el_0,'\n        ',this.debug(1,33,55));
+    this._el_2 = this.renderer.createElement(this._el_0,'div',this.debug(2,34,8));
+    this.renderer.setElementAttribute(this._el_2,'class','date');
+    this._text_3 = this.renderer.createText(this._el_2,'',this.debug(3,34,26));
+    this._text_4 = this.renderer.createText(this._el_0,'\n        ',this.debug(4,34,43));
+    this._el_5 = this.renderer.createElement(this._el_0,'div',this.debug(5,35,8));
+    this.renderer.setElementAttribute(this._el_5,'class','icon');
+    this._NgClass_5_3 = new import13.NgClass(this.parent.parentInjector.get(import15.IterableDiffers),this.parent.parentInjector.get(import16.KeyValueDiffers),new import17.ElementRef(this._el_5),this.renderer);
+    this._text_6 = this.renderer.createText(this._el_0,'\n        ',this.debug(6,35,53));
+    this._el_7 = this.renderer.createElement(this._el_0,'div',this.debug(7,36,8));
+    this.renderer.setElementAttribute(this._el_7,'class','temp-high');
+    this._text_8 = this.renderer.createText(this._el_7,'\n          ',this.debug(8,36,31));
+    this._el_9 = this.renderer.createElement(this._el_7,'span',this.debug(9,37,10));
+    this.renderer.setElementAttribute(this._el_9,'class','value');
+    this._text_10 = this.renderer.createText(this._el_9,'',this.debug(10,37,30));
+    this._text_11 = this.renderer.createText(this._el_7,'°\n        ',this.debug(11,37,48));
+    this._text_12 = this.renderer.createText(this._el_0,'\n        ',this.debug(12,38,14));
+    this._el_13 = this.renderer.createElement(this._el_0,'div',this.debug(13,39,8));
+    this.renderer.setElementAttribute(this._el_13,'class','temp-low');
+    this._text_14 = this.renderer.createText(this._el_13,'\n          ',this.debug(14,39,30));
+    this._el_15 = this.renderer.createElement(this._el_13,'span',this.debug(15,40,10));
+    this.renderer.setElementAttribute(this._el_15,'class','value');
+    this._text_16 = this.renderer.createText(this._el_15,'',this.debug(16,40,30));
+    this._text_17 = this.renderer.createText(this._el_13,'°\n        ',this.debug(17,40,48));
+    this._text_18 = this.renderer.createText(this._el_0,'\n      ',this.debug(18,41,14));
+    this._expr_0 = import11.uninitialized;
+    this._expr_1 = import11.uninitialized;
+    this._expr_2 = import11.uninitialized;
+    this._expr_3 = import11.uninitialized;
+    this._expr_4 = import11.uninitialized;
+    this.init([].concat([this._el_0]),[
       this._el_0,
       this._text_1,
       this._el_2,
       this._text_3,
-      this._el_4,
-      this._text_5,
+      this._text_4,
+      this._el_5,
       this._text_6,
       this._el_7,
       this._text_8,
       this._el_9,
       this._text_10,
-      this._el_11,
+      this._text_11,
       this._text_12,
       this._el_13,
       this._text_14,
       this._el_15,
       this._text_16,
-      this._el_17,
-      this._text_18,
-      this._el_19,
-      this._el_20,
-      this._text_21,
-      this._text_22,
-      this._text_23,
-      this._text_24,
-      this._el_25,
-      this._text_26,
-      this._el_27,
-      this._text_28,
-      this._el_29,
-      this._el_30,
-      this._text_31,
-      this._text_32,
-      this._text_33,
-      this._el_34,
-      this._text_35,
-      this._el_36,
-      this._text_37,
-      this._el_38,
-      this._text_39,
-      this._el_40,
-      this._text_41,
-      this._el_42,
-      this._text_43,
-      this._text_44,
-      this._el_45,
-      this._text_46,
-      this._text_47,
-      this._text_48,
-      this._text_49,
-      this._el_50,
-      this._text_51,
-      this._el_52,
-      this._text_53,
-      this._el_54,
-      this._text_55,
-      this._el_56,
-      this._text_57,
-      this._el_58,
-      this._text_59,
-      this._el_60,
-      this._text_61,
-      this._text_62,
-      this._el_63,
-      this._text_64,
-      this._el_65,
-      this._text_66,
-      this._text_67,
-      this._text_68,
-      this._el_69,
-      this._text_70,
-      this._el_71,
-      this._text_72,
-      this._el_73,
-      this._text_74,
-      this._el_75,
-      this._text_76,
-      this._el_77,
-      this._text_78,
-      this._text_79,
-      this._el_80,
-      this._text_81,
-      this._el_82,
-      this._text_83,
-      this._text_84,
-      this._text_85,
-      this._el_86,
-      this._text_87,
-      this._el_88,
-      this._text_89,
-      this._el_90,
-      this._text_91,
-      this._el_92,
-      this._text_93,
-      this._el_94,
-      this._text_95,
-      this._text_96,
-      this._el_97,
-      this._text_98,
-      this._el_99,
-      this._text_100,
-      this._text_101,
-      this._text_102,
-      this._el_103,
-      this._text_104,
-      this._el_105,
-      this._text_106,
-      this._el_107,
-      this._text_108,
-      this._el_109,
-      this._text_110,
-      this._el_111,
-      this._text_112,
-      this._text_113,
-      this._el_114,
-      this._text_115,
-      this._el_116,
-      this._text_117,
-      this._text_118,
-      this._text_119,
-      this._el_120,
-      this._text_121,
-      this._el_122,
-      this._text_123,
-      this._el_124,
-      this._text_125,
-      this._el_126,
-      this._text_127,
-      this._el_128,
-      this._text_129,
-      this._text_130,
-      this._el_131,
-      this._text_132,
-      this._el_133,
-      this._text_134,
-      this._text_135,
-      this._text_136,
-      this._el_137,
-      this._text_138,
-      this._el_139,
-      this._text_140,
-      this._el_141,
-      this._text_142,
-      this._el_143,
-      this._text_144,
-      this._el_145,
-      this._text_146,
-      this._text_147,
-      this._el_148,
-      this._text_149,
-      this._el_150,
-      this._text_151,
-      this._text_152,
-      this._text_153,
-      this._el_154,
-      this._text_155,
-      this._el_156,
-      this._text_157,
-      this._el_158,
-      this._text_159,
-      this._el_160,
-      this._text_161,
-      this._el_162,
-      this._text_163,
-      this._text_164,
-      this._el_165,
-      this._text_166,
-      this._el_167,
-      this._text_168,
-      this._text_169,
-      this._text_170,
-      this._text_171,
-      this._text_172
+      this._text_17,
+      this._text_18
     ]
     ,[],[]);
     return null;
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import2.NgClass) && (15 === requestNodeIndex))) { return this._NgClass_15_3; }
+    if (((token === import13.NgClass) && (5 === requestNodeIndex))) { return this._NgClass_5_3; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
-    this.debug(15,7,26);
-    const currVal_1 = this.context.icon;
-    if (import6.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
-      this._NgClass_15_3.rawClass = currVal_1;
-      this.renderer.setBindingDebugInfo(this._el_15,'ng-reflect-raw-class',((currVal_1 == null)? null: currVal_1.toString()));
+    this.debug(5,35,26);
+    const currVal_1 = this.context.$implicit.icon;
+    if (import8.checkBinding(throwOnChange,this._expr_1,currVal_1)) {
+      this._NgClass_5_3.rawClass = currVal_1;
+      this.renderer.setBindingDebugInfo(this._el_5,'ng-reflect-raw-class',((currVal_1 == null)? null: currVal_1.toString()));
       this._expr_1 = currVal_1;
     }
-    this.debug(15,7,13);
+    this.debug(5,35,13);
     const currVal_2 = 'icon';
-    if (import6.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
-      this._NgClass_15_3.initialClasses = currVal_2;
-      this.renderer.setBindingDebugInfo(this._el_15,'ng-reflect-initial-classes',((currVal_2 == null)? null: currVal_2.toString()));
+    if (import8.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
+      this._NgClass_5_3.initialClasses = currVal_2;
+      this.renderer.setBindingDebugInfo(this._el_5,'ng-reflect-initial-classes',((currVal_2 == null)? null: currVal_2.toString()));
       this._expr_2 = currVal_2;
     }
-    if (!throwOnChange) { this._NgClass_15_3.ngDoCheck(); }
+    if (!throwOnChange) { this._NgClass_5_3.ngDoCheck(); }
     this.detectContentChildrenChanges(throwOnChange);
-    this.debug(5,2,26);
-    const currVal_0 = import6.interpolate(1,'',this.context.name,'');
-    if (import6.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
-      this.renderer.setText(this._text_5,currVal_0);
+    this.debug(3,34,26);
+    const currVal_0 = import8.interpolate(1,'',this.context.$implicit.day,'');
+    if (import8.checkBinding(throwOnChange,this._expr_0,currVal_0)) {
+      this.renderer.setText(this._text_3,currVal_0);
       this._expr_0 = currVal_0;
+    }
+    this.debug(10,37,30);
+    const currVal_3 = import8.interpolate(1,'',this.context.$implicit.max,'');
+    if (import8.checkBinding(throwOnChange,this._expr_3,currVal_3)) {
+      this.renderer.setText(this._text_10,currVal_3);
+      this._expr_3 = currVal_3;
+    }
+    this.debug(16,40,30);
+    const currVal_4 = import8.interpolate(1,'',this.context.$implicit.min,'');
+    if (import8.checkBinding(throwOnChange,this._expr_4,currVal_4)) {
+      this.renderer.setText(this._text_16,currVal_4);
+      this._expr_4 = currVal_4;
     }
     this.detectViewChildrenChanges(throwOnChange);
   }
   destroyInternal():void {
-    this.debug(15,7,8);
-    this._NgClass_15_3.ngOnDestroy();
+    this.debug(5,35,8);
+    this._NgClass_5_3.ngOnDestroy();
   }
 }
-export function viewFactory_WeatherCard0(viewUtils:import6.ViewUtils,parentInjector:import7.Injector,declarationEl:import8.AppElement):import4.AppView<import5.WeatherCard> {
-  if ((renderType_WeatherCard === null)) { (renderType_WeatherCard = viewUtils.createRenderComponentType('/Users/robwormald/Dev/demos/ng2-pwa-demo/src/weather-card.html',0,import14.ViewEncapsulation.Emulated,styles_WeatherCard)); }
-  return new _View_WeatherCard0(viewUtils,parentInjector,declarationEl);
+function viewFactory_WeatherCard3(viewUtils:import8.ViewUtils,parentInjector:import9.Injector,declarationEl:import7.AppElement):import5.AppView<any> {
+  return new _View_WeatherCard3(viewUtils,parentInjector,declarationEl);
 }
 const styles_WeatherCard_Host:any[] = [];
-const nodeDebugInfos_WeatherCard_Host0:import1.StaticNodeDebugInfo[] = [new import1.StaticNodeDebugInfo([import5.WeatherCard],import5.WeatherCard,{})];
-var renderType_WeatherCard_Host:import3.RenderComponentType = null;
-class _View_WeatherCard_Host0 extends import4.DebugAppView<any> {
+const nodeDebugInfos_WeatherCard_Host0:import1.StaticNodeDebugInfo[] = [new import1.StaticNodeDebugInfo([import6.WeatherCard],import6.WeatherCard,{})];
+var renderType_WeatherCard_Host:import4.RenderComponentType = null;
+class _View_WeatherCard_Host0 extends import5.DebugAppView<any> {
   _el_0: any;
-  private _appEl_0:import8.AppElement;
-  _WeatherCard_0_4:import5.WeatherCard;
-  constructor(viewUtils:import6.ViewUtils,parentInjector:import7.Injector,declarationEl:import8.AppElement) {
-    super(_View_WeatherCard_Host0,renderType_WeatherCard_Host,import9.ViewType.HOST,viewUtils,parentInjector,declarationEl,import10.ChangeDetectionStrategy.CheckAlways,nodeDebugInfos_WeatherCard_Host0);
+  private _appEl_0:import7.AppElement;
+  _WeatherCard_0_4:import6.WeatherCard;
+  constructor(viewUtils:import8.ViewUtils,parentInjector:import9.Injector,declarationEl:import7.AppElement) {
+    super(_View_WeatherCard_Host0,renderType_WeatherCard_Host,import10.ViewType.HOST,viewUtils,parentInjector,declarationEl,import11.ChangeDetectionStrategy.CheckAlways,nodeDebugInfos_WeatherCard_Host0);
   }
-  createInternal(rootSelector:string):import8.AppElement {
+  createInternal(rootSelector:string):import7.AppElement {
     this._el_0 = this.selectOrCreateHostElement('weather-card',rootSelector,this.debug(0,0,0));
-    this._appEl_0 = new import8.AppElement(0,null,this,this._el_0);
+    this._appEl_0 = new import7.AppElement(0,null,this,this._el_0);
     var compView_0 = viewFactory_WeatherCard0(this.viewUtils,this.injector(0),this._appEl_0);
-    this._WeatherCard_0_4 = new import5.WeatherCard();
+    this._WeatherCard_0_4 = new import6.WeatherCard();
     this._appEl_0.initComponent(this._WeatherCard_0_4,[],compView_0);
     compView_0.create(this._WeatherCard_0_4,this.projectableNodes,null);
     this.init([].concat([this._el_0]),[this._el_0],[],[]);
     return this._appEl_0;
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import5.WeatherCard) && (0 === requestNodeIndex))) { return this._WeatherCard_0_4; }
+    if (((token === import6.WeatherCard) && (0 === requestNodeIndex))) { return this._WeatherCard_0_4; }
     return notFoundResult;
   }
 }
-function viewFactory_WeatherCard_Host0(viewUtils:import6.ViewUtils,parentInjector:import7.Injector,declarationEl:import8.AppElement):import4.AppView<any> {
-  if ((renderType_WeatherCard_Host === null)) { (renderType_WeatherCard_Host = viewUtils.createRenderComponentType('',0,import14.ViewEncapsulation.Emulated,styles_WeatherCard_Host)); }
+function viewFactory_WeatherCard_Host0(viewUtils:import8.ViewUtils,parentInjector:import9.Injector,declarationEl:import7.AppElement):import5.AppView<any> {
+  if ((renderType_WeatherCard_Host === null)) { (renderType_WeatherCard_Host = viewUtils.createRenderComponentType('',0,import12.ViewEncapsulation.Emulated,styles_WeatherCard_Host)); }
   return new _View_WeatherCard_Host0(viewUtils,parentInjector,declarationEl);
 }
-export const WeatherCardNgFactory:import15.ComponentFactory<import5.WeatherCard> = new import15.ComponentFactory<import5.WeatherCard>('weather-card',viewFactory_WeatherCard_Host0,import5.WeatherCard);
+export const WeatherCardNgFactory:import18.ComponentFactory<import6.WeatherCard> = new import18.ComponentFactory<import6.WeatherCard>('weather-card',viewFactory_WeatherCard_Host0,import6.WeatherCard);

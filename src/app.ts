@@ -32,7 +32,7 @@ export class WeatherApp {
     this.setDialogState(false);
   }
   refresh(){
-    console.log('refreshing...')
+    this.weatherData.refreshData();
   }
   private setDialogState(show:boolean){
     this.viewState['dialog-container--visible'] = show;
