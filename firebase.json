@@ -1,5 +1,5 @@
 {
-  "firebase": "ng2-weather-pwa",
+  "firebase": "ng2-weather-pwa2",
   "public": "dist",
   "ignore": [
     "firebase.json",

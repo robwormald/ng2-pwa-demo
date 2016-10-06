@@ -3,28 +3,36 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "devDependencies": {
+    "@angular/common": "^2.0.1",
+    "@angular/compiler": "^2.0.1",
+    "@angular/compiler-cli": "^0.6.3",
+    "@angular/core": "^2.0.1",
+    "@angular/platform-browser": "^2.0.1",
+    "@angular/platform-browser-dynamic": "^2.0.1",
+    "@angular/platform-server": "^2.0.1",
+    "@angular/router": "^3.0.1",
+    "@types/node": "^6.0.41",
+    "core-js": "^2.4.1",
+    "systemjs-builder": "^0.15.32",
+    "typescript": "^2.0.3",
+    "yargs": "^6.0.0"
+  },
   "dependencies": {
-    "@angular/common": "file:vendor/angular/common",
-    "@angular/compiler": "file:vendor/angular/compiler",
-    "@angular/compiler-cli": "file:vendor/angular/compiler_cli",
-    "@angular/core": "file:vendor/angular/core",
-    "@angular/platform-browser": "file:vendor/angular/platform-browser",
-    "@angular/platform-server": "file:vendor/angular/platform-server",
-    "google-closure-compiler": "^20160315.2.0",
-    "rxjs": "^5.0.0-beta.6",
-    "rxjs-es": "file:vendor/RxJS",
-    "typescript": "^1.9.0-dev.20160502",
-    "zone.js": "^0.6.12"
+    "@angular/http": "^2.0.1",
+    "@angular/material": "^2.0.0-alpha.9-3",
+    "google-closure-compiler-js": "^20160916.0.0",
+    "rollup": "^0.36.1",
+    "rollup-plugin-commonjs": "^5.0.4",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rxjs": "^5.0.0-beta.12",
+    "rxjs-es": "^5.0.0-beta.12"
   },
-  "devDependencies": {},
   "scripts": {
-    "postinstall": "cp vendor/closure/compiler.jar node_modules/google-closure-compiler && cp vendor/tsickle/* node_modules/tsickle/build/src",
-    "build": "npm run clean && ngc && ./build_closure.sh && npm run copy",
-    "clean": "rm -rf dist && rm -rf built && rm -rf tmp",
-    "copy_src": "cp -r src tmp",
-    "copy": "cp index.html dist/index.html && cp vendor/angular2-polyfills.min.js dist/angular2-polyfills.min.js && cp -r images dist/images && cp vendor/service-worker.js dist/service-worker.js && cp vendor/manifest.webapp dist/manifest.webapp"
-
+    "start": "npm run build && npm run http-server",
+    "start:prod": "npm run build --prod && npm run http-server",
+    "build": "ngc && node rollup.config.js"
   },
-  "author": "Alex Eagle <alexeagle@google.com> (https://angularjs.org/)",
+  "author": "Rob Wormald",
   "license": "MIT"
 }
