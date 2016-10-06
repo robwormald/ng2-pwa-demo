@@ -1,17 +1,11 @@
-import {Component, Renderer, ViewChild, QueryList, ElementRef, AfterViewInit, NgZone, ApplicationRef, provide} from '@angular/core'
-import {NgFor, NgIf, NgClass, AsyncPipe} from '@angular/common'
-import {WeatherCard} from './weather-card'
-import {CityPicker} from './city-picker'
+import {Component, Renderer, ViewChild, QueryList, ElementRef, AfterViewInit, NgZone, ApplicationRef} from '@angular/core'
 
 import {WeatherData} from './weather-data'
 
 @Component({
 	selector: 'weather-app',
-	templateUrl: 'app.html',
-	styleUrls: ['app.css'],
-  directives: [NgFor, NgIf, NgClass, WeatherCard, CityPicker],
-  pipes: [],
-  providers: []
+	templateUrl: './app.html',
+	styleUrls: ['./app.css'],
 })
 export class WeatherApp {
   viewState = {}

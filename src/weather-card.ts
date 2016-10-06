@@ -1,5 +1,4 @@
 import {Component, Input} from '@angular/core'
-import {NgClass, NgIf, NgFor, JsonPipe, DatePipe} from '@angular/common'
 
 export interface CurrentConditions {
   icon: string;
@@ -16,10 +15,8 @@ export interface City {
 
 @Component({
 	selector: 'weather-card',
-	templateUrl: 'weather-card.html',
-	styleUrls: ['weather-card.css'],
-  directives: [NgClass, NgIf, NgFor],
-  pipes:[JsonPipe]
+	templateUrl: './weather-card.html',
+	styleUrls: ['./weather-card.css'],
 })
 export class WeatherCard {
  name:string;
