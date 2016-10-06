@@ -30,8 +30,9 @@
   },
   "scripts": {
     "start": "npm run build && npm run http-server",
-    "start:prod": "npm run build --prod && npm run http-server",
-    "build": "ngc && node rollup.config.js"
+    "start:prod": "npm run build:prod && npm run http-server",
+    "build": "ngc && node rollup.config.js",
+    "build:prod": "ngc && node rollup.config.js --prod"
   },
   "author": "Rob Wormald",
   "license": "MIT"
