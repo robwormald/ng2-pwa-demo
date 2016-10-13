@@ -36,7 +36,8 @@ if(argv.prod){
 //build the AOT package
 var buildAOT = rollup.rollup({
 	entry: './built/main.js',
-	plugins: plugins
+	plugins: plugins,
+  context: 'window'
 })
 .then(writeIIFE('./release/weather-app.js'))
 .then(() => console.log('built angular2'))
