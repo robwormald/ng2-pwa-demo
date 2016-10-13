@@ -1,9 +1,49 @@
 {
   "firebase": "ng2-weather-pwa2",
-  "public": "dist",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ]
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "/images/*",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</images/ic_add_white_24px.svg>;rel=preload;as=image,</images/ic_refresh_white_24px.svg>;rel=preload;as=image"
+          }
+        ]
+      },
+      {
+        "source": "/images/*",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</images/fog.png>;rel=preload;as=image,</images/clear.png>;rel=preload;as=image,</images/cloudy-scattered-showers.png>;rel=preload;as=image,</images/cloudy.png>;rel=preload;as=image"
+          }
+        ]
+      },
+      {
+        "source": "/images/*",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</images/partly-cloudy.png>;rel=preload;as=image,</images/rain.png>;rel=preload;as=image,</images/scattered-showers.png>;rel=preload;as=image"
+          }
+        ]
+      },
+      {
+        "source": "/images/*",
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</images/sleet.png>;rel=preload;as=image,</images/snow.png>;rel=preload;as=image,</images/wind.png>;rel=preload;as=image,</images/thunderstorm.png>;rel=preload;as=image"
+          }
+        ]
+      }
+    ]
+  }
 }
